@@ -13,8 +13,8 @@
 	<div class="form-group">
 		{!! Form::label('idRisco', 'Id do Risco:') !!}
 		{!! Form::text('idRisco',$risco->id, ['class'=> 'form-control']) !!}
-		{!! Form::label('idActivo', 'Id do Activo:') !!}
-		{!! Form::text('idActivo',$risco->idActivo, ['class'=> 'form-control']) !!}
+		{!! Form::label('id_activo', 'Id do Activo:') !!}
+		{!! Form::text('id_activo',$risco->id_activo, ['class'=> 'form-control']) !!}
 		{!! Form::label('vulnerabilidade', 'Vulnerabilidade:') !!}
 		{!! Form::text('vulnerabilidade',$risco->vulnerabilidade, ['class'=> 'form-control']) !!}
 		{!! Form::label('ameaca', 'Ameaça:') !!}

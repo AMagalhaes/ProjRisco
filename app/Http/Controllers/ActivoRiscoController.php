@@ -45,7 +45,7 @@ class ActivoRiscoController extends Controller {
 		// obtem o activo e associo o risco
 		Activo::find($idActivo)->riscos()->save($risco);
 
-		return redirect()->back();
+		return redirect()->route('risco.index');
 	}
 
 	/**

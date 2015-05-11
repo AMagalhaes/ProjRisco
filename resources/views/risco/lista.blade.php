@@ -26,7 +26,7 @@
 			@foreach ($riscos as $risco)
 				<tr>
 					<td>{{$risco->id}}</td>
-					<td>{{$risco->idActivo}}</td>
+					<td>{{$risco->id_activo}}</td>
 					<td>{{$risco->vulnerabilidade}}</td>
 					<td>{{$risco->ameaca}}</td>
 					<td>{{$risco->consequencia}}</td>

@@ -32,7 +32,7 @@
 				<td>{{$activo->obs}}</td>
 				<td>{{$activo->localizacao}}</td>
 				<td>{{$activo->tipo}}</td>
-				<td>{{$activo->obsFinalA}}</td>
+				<td>{{$activo->obs_final}}</td>
 					<td>
 						{!! Form::open(['route' => array('activo.destroy', $activo->id), 'method' => 'delete']) !!}
 							<!-- Show -->

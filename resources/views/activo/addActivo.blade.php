@@ -18,8 +18,8 @@
 	{!! Form::text('localizacao',null, ['class'=> 'form-control']) !!}
 	{!! Form::label('tipo', 'Tipo:') !!}
 	{!! Form::text('tipo',null, ['class'=> 'form-control']) !!}
-	{!! Form::label('obsFinalA', 'Observação Final:') !!}
-	{!! Form::textarea('obsFinalA',null, ['class'=> 'form-control']) !!}
+	{!! Form::label('obs_final', 'Observação Final:') !!}
+	{!! Form::textarea('obs_final',null, ['class'=> 'form-control']) !!}
 </div>
 
 <div class="form-group">

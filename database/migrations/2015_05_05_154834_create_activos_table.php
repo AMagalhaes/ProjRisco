@@ -20,7 +20,6 @@ class CreateActivosTable extends Migration {
 			$table->string('obs');
 			$table->string('localizacao');
 			$table->string('tipo');
-			$table->string('obs_final');
 			$table->timestamps();
 		});
 	}

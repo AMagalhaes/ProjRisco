@@ -22,32 +22,27 @@
 			vertical-align: middle;
 		}
 
-
+		.content {
+			text-align: center;
+			display: inline-block;
+		}
 
 		.title {
 			font-size: 96px;
-			margin-top: 1px;
+			margin-bottom: 40px;
 		}
 
-
-		.option {
+		.quote {
 			font-size: 24px;
 		}
-
 	</style>
 </head>
 <body>
-	<div class="container">
-				<div class="title">MENU</div>
-
-				<div class="option"><a href="{{ route('activo.create') }}">Adicionar Activo</a></div>
-				<div class="option"><a href="{{ route('activo.index') }}">Listar Activo</a></div>
-
-				<div class="option"><a href="{{ route('trata.create') }}" >Adicionar Tratamento</a></div>
-				<div class="option"><a href="{{ route('trata.index')}}" >Listar Tratamento</a></div>
-
-				<div class="option"><a href="{{ url('/Calcular')}}">Calcular Risco</a></div>
-			</div>
+<div class="container">
+	<div class="content">
+		<div class="title">Laravel 5</div>
+		<div class="quote">{{ Inspiring::quote() }}</div>
 	</div>
+</div>
 </body>
 </html>

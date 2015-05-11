@@ -1368,10 +1368,6 @@ pre code {
   padding-left: 15px;
   padding-right: 15px;
 }
-
-.container table{
-  color: #00FF00;
-}
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -6230,51 +6226,8 @@ button.close {
     display: none !important;
   }
 }
-body
-{
+body,
+label,
+.checkbox label {
   font-weight: 300;
-  background: #192E7D url(../imgs/logo_bg.png) no-repeat right bottom fixed;
-
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  body {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
-}
-
-h1{
-  color: #FFFFFF;
-  font-size: 100px;
-}
-
-.form-group p {
-  width: 50%;
-  margin: 0 auto;
-  font-size: 1.5em;
-}
-.form-group textarea {
-  height: 105px;
-  background-color: #F5F5F5;
-}
-
-.form-group label{
-  color: #00b3ee;
-}
-
-.container p{
-  color: #FFFFFF;
 }

@@ -30,9 +30,8 @@ class ActivoRiscoController extends Controller {
 	public function create($activoID)
 	{
 		// @todo: Validar o ID 'activoID'
-		return view('risco.adiciona', ['idActivo' => $activoID]);
+		return view('risco.adiciona', ['activo' => Activo::find($activoID)]);
 	}
-
 	/**
 	 * Store a newly created resource in storage.
 	 *

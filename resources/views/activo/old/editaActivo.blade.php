@@ -7,13 +7,16 @@
 </div>
 
 <div class="container">
-	<table class="table table-condensed">
+	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th class="col-md-3">Nome</th>
+				<th>#ID</th>
+				<th>Nome</th>
 				<th>Valor</th>
-				<th class="col-md-3">Localização</th>
-				<th class="col-md-2">Tipo</th>
+				<th>Observação</th>
+				<th>Localização</th>
+				<th>Tipo</th>
+				<th>obsFinal</th>
 				<th>
 					Ações
 				</th>
@@ -23,10 +26,13 @@
 		<tbody>
 			@foreach ($activos as $activo)
 			<tr>
+				<td>{{$activo->id}}</td>
 				<td>{{$activo->nome}}</td>
 				<td>{{$activo->valor}}</td>
+				<td>{{$activo->obs}}</td>
 				<td>{{$activo->localizacao}}</td>
 				<td>{{$activo->tipo}}</td>
+				<td>{{$activo->obsFinalA}}</td>
 					<td>
 						{!! Form::open(['route' => array('activo.destroy', $activo->id), 'method' => 'delete']) !!}
 							<!-- Show -->

@@ -2,16 +2,10 @@
 
 @section('content')
 <div class="container">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-default">
-				<div class="panel-heading">Home</div>
 
-				<div class="panel-body">
-					You are logged in!
-				</div>
-			</div>
-		</div>
-	</div>
+	<h1 class="text-center">Ativos</h1>
+
+	<p class="text-center">Registo e análise dos ativos (ISO/ICE 207001)</p>
+
 </div>
 @endsection

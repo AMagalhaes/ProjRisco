@@ -11,8 +11,7 @@ class Activo extends Model {
 		'valor',
 		'obs',
 		'localizacao',
-		'tipo',
-		'obs_final'
+		'tipo'
 	];
 
 	public function riscos() {

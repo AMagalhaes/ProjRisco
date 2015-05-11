@@ -1,33 +1,56 @@
 @extends('app')
 
 @section('content')
-<hr/>
-
 <div class="container">
-	{!! Form::open(['url'=>'activo']) !!}
-<div class="form-group">
 
-	{!! Form::label('nome', 'Nome do Activo:') !!}
-	{!! Form::text('nome',null, ['class'=> 'form-control']) !!}
-	{!! Form::label('valor', 'Valor do activo:') !!}
-	{!! Form::select('valor',[1,2,3,4,5], ['class'=> 'form-control']) !!}
-</br>
-	{!! Form::label('obs', 'Observação:') !!}
-	{!! Form::textarea('obs',null, ['class'=> 'form-control']) !!}
-	{!! Form::label('localizacao', 'Localização:') !!}
-	{!! Form::text('localizacao',null, ['class'=> 'form-control']) !!}
-	{!! Form::label('tipo', 'Tipo:') !!}
-	{!! Form::text('tipo',null, ['class'=> 'form-control']) !!}
-	{!! Form::label('obsFinalA', 'Observação Final:') !!}
-	{!! Form::textarea('obsFinalA',null, ['class'=> 'form-control']) !!}
+	<h1 class="text-center">Registo de Ativos</h1>
+
+	<p>Este formulário destina-se a regitar todos os ativos a considerar. Apenas os ativos que justifiquem
+		importância no funcionamento de todos os processos em causa devem ser registados.</p>
+	<div id="formAtivo">
+		@if(Session::has('message'))
+		<div class="alert alert-success">{{ Session::get('message') }}</div>
+		@endif
+		{!! Form::open(['url'=>'activo']) !!}
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						{!! Form::label('nome', 'Nome do Activo:') !!}
+						{!! Form::text('nome',null, ['class'=> 'form-control']) !!}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						{!! Form::label('tipo', 'Tipo Ativo:') !!}
+						{!! Form::select('tipo', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], ['class'=> 'form-control']) !!}
+					</div>
+					<div class="form-group">
+						{!! Form::label('localizacao', 'Localização:') !!}
+						<br/>
+						{!! Form::select('localizacao',['DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], ['class'=> 'form-control']) !!}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						{!! Form::label('valor', 'Valor do Ativo:') !!}
+						<br/>
+						{!! Form::text('valor', null, ['class'=> 'form-control']) !!}
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="form-group">
+						{!! Form::label('obs', 'Observação:') !!}
+						{!! Form::textarea('obs',null, ['class'=> 'form-control']) !!}
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
+			<input type="submit" class="btn btn-primary btn-block" value="Registar Ativo"/>
+		{!! Form::close() !!}
+	</div>
 </div>
+@endsection
 
-<div class="form-group">
-{!! Form::submit('Add Activo', ['class' => 'btn btn-primary form-control']) !!}
-</div>
-
-{!! Form::close() !!}
-</div>
-
-
-@stop

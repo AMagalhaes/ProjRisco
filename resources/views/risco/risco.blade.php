@@ -18,8 +18,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="form-group">
-					{!! Form::label('id_activo', 'Id do Activo:') !!}
-					{!! Form::text('id_activo',$risco->id_activo, ['class'=> 'form-control']) !!}
+					{!! Form::label('activo_id', 'Id do Activo:') !!}
+					{!! Form::text('activo_id',$risco->activo_id, ['class'=> 'form-control', 'disabled' => true]) !!}
 				</div>
 			</div>
 		</div>

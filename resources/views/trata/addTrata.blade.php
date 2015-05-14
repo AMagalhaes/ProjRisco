@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    <h1 class="text-center">Tratamento do Risco</h1>
+    <h1 class="text-center">Controlo do Risco</h1>
 
     <p>Este formulário destina-se a regitar todos os controlos pensados e implementados para a redução ou remoção
         das vulnerabilidades e consequente ameaça relativamente aos ativos.</p>
@@ -49,7 +49,7 @@
         </div
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
         <a class="btn btn-primary btn-block" href="{{ URL::previous() }}">Voltar</a>
-        <input type="submit" class="btn btn-primary btn-block" value="Registar Tratamento"/>
+        <input type="submit" class="btn btn-primary btn-block" value="Registar Controlo"/>
         {!! Form::close() !!}
     </div>
 </div>

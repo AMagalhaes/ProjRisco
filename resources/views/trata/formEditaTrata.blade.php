@@ -55,7 +55,7 @@
         </div
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
         <a class="btn btn-primary btn-block" href="{{ URL::previous() }}">Voltar</a>
-        <input type="submit" class="btn btn-primary btn-block" value="Registar Tratamento"/>
+        <input type="submit" class="btn btn-primary btn-block" value="Alterar Controlo"/>
         {!! Form::close() !!}
     </div>
 </div>

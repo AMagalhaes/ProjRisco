@@ -10,7 +10,7 @@
     <div>
         <div class="form-group">
             {!! Form::label('localizacao', 'Localização:') !!}
-            {!! Form::select('localizacaoFilter', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], ['class'=> 'form-control']) !!}
+			{!! Form::select('localizacaoFilter',['Todos', 'DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], ['class'=> 'form-control']) !!}
             <button class="btn btn-primary btn-small" type="submit">Filtrar</button>
         </div>
     </div>

@@ -17,7 +17,12 @@ class ActivoController extends Controller {
 	 */
 	public function index()
 	{
-		$activos = Activo::all();
+		if (Input::has('localizacaoFilter') && !empty(Input::get('localizacaoFilter'))) {
+
+			$activos = Activo::where('localizacao', Input::get('localizacaoFilter'))->get();
+		} else {
+			$activos = Activo::all();
+		}
 
 		return view('activo.editaActivo', compact('activos'));
 	}

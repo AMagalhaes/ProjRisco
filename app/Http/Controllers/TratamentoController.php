@@ -30,7 +30,7 @@ class TratamentoController extends Controller {
 	 */
 	public function create($idRisco)
 	{
-		return view('trata.addTrata', ['idRisco' => $idRisco]);
+		return view('trata.addTrata', ['risco' => Risco::find($idRisco)]);
 	}
 
 	/**
@@ -46,7 +46,7 @@ class TratamentoController extends Controller {
 		// obtem o risco e associa o tratamento ao risco
 		Risco::find($idRisco)->tratamentos()->save($trata);
 
-		return redirect()->back();
+		return redirect()->route('trata.index');
 	}
 	/**
 	 * Display the specified resource.

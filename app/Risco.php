@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Risco extends Model {
 
 	protected $fillable=[
-		'id_activo',
+		'activo_id',
 		'vulnerabilidade',
 		'ameaca',
 		'consequencia',

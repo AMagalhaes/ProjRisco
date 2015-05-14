@@ -9,7 +9,7 @@
 <hr/>
 
 <div class="container">
-	{!! Form::open(['route' => ['risco.update', $risco->id], 'method' => 'PUT']) !!}
+	{!! Form::open(['route' => ['activo.risco.update', $risco->activo_id, $risco->id], 'method' => 'PUT']) !!}
 	<div class="form-group">
 		{!! Form::label('idRisco', 'Id do Risco:') !!}
 		{!! Form::text('idRisco',$risco->id, ['class'=> 'form-control']) !!}

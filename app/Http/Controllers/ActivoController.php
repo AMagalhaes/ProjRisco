@@ -82,6 +82,8 @@ class ActivoController extends Controller {
 		$activo->fill(Input::all());
 		$activo->save();
 
+		$activo->recalcImpotancia();
+
 		return redirect()->route('activo.index');
 	}
 

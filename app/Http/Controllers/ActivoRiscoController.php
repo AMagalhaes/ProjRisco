@@ -45,6 +45,8 @@ class ActivoRiscoController extends Controller {
 		// obtem o activo e associo o risco
 		Activo::find($idActivo)->riscos()->save($risco);
 
+		$risco->activo->recalcImpotancia();
+
 		return redirect()->route('risco.index');
 	}
 
@@ -65,7 +67,7 @@ class ActivoRiscoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($idActivo, $id)
 	{
 		$risco = Risco::findOrFail($id);
 
@@ -78,12 +80,14 @@ class ActivoRiscoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($idActivo, $id)
 	{
 		$risco = Risco::find($id);
 		$risco->fill(Input::all());
 		$risco->save();
 
+		// recalcula a importancia do activo
+		$risco->activo->recalcImpotancia();
 
 		return redirect()->route('risco.index');
 	}
@@ -94,10 +98,12 @@ class ActivoRiscoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($idActivo, $id)
 	{
 		$risco = Risco::find($id);
 		$risco->delete();
+
+		$risco->activo->recalcImpotancia();
 
 		return redirect()->back();
 	}

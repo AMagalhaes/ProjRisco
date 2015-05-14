@@ -19,34 +19,41 @@
 						{!! Form::text('nome',null, ['class'=> 'form-control']) !!}
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="form-group">
-						{!! Form::label('tipo', 'Tipo Ativo:') !!}
-						{!! Form::select('tipo', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], ['class'=> 'form-control']) !!}
-					</div>
-					<div class="form-group">
-						{!! Form::label('localizacao', 'Localização:') !!}
-						<br/>
-						{!! Form::select('localizacao',['DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], ['class'=> 'form-control']) !!}
-					</div>
-				</div>
-				<div class="col-md-4">
+
+				<div class="col-md-6">
 					<div class="form-group">
 						{!! Form::label('valor', 'Valor do Ativo:') !!}
-						<br/>
 						{!! Form::text('valor', null, ['class'=> 'form-control']) !!}
 					</div>
 				</div>
+			</div>
 
-				<div class="col-md-4">
+			<div class="row">
+
+				<div class="col-md-6">
+					<div class="form-group">
+						{!! Form::label('localizacao', 'Localização:') !!}
+						{!! Form::select('localizacao',['', 'DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], null, ['class'=> 'form-control']) !!}
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="form-group">
+						{!! Form::label('tipo', 'Tipo Ativo:') !!}
+						{!! Form::select('tipo', ['', 'Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], null, ['class'=> 'form-control']) !!}
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
 					<div class="form-group">
 						{!! Form::label('obs', 'Observação:') !!}
 						{!! Form::textarea('obs',null, ['class'=> 'form-control']) !!}
 					</div>
 				</div>
 			</div>
+
 			<input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
 			<input type="submit" class="btn btn-primary btn-block" value="Registar Ativo"/>
 		{!! Form::close() !!}

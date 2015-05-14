@@ -7,7 +7,7 @@
 	<title>Câmara Municipal do Porto</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-	<link rel="shortcut icon" href="./imgs/logoPorto.png">
+	<link rel="shortcut icon" href="{{ asset('/imgs/logoPorto.png') }}">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -20,7 +20,7 @@
 	<![endif]-->
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"

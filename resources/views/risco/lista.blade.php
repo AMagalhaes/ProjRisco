@@ -33,12 +33,12 @@
 					<td>{{$risco->probabilidade}}</td>
 					<td>{{$risco->impacto}}</td>
 						<td>
-							{!! Form::open(array('route' => array('risco.destroy', $risco->id), 'method' => 'delete')) !!}
+							{!! Form::open(array('route' => array('activo.risco.destroy', $risco->activo_id, $risco->id), 'method' => 'delete')) !!}
 								<!-- View Btn -->
 								<a class="btn btn-primary" href="{{ route('risco.show', [$risco->id]) }}">Ver</a>
 
 								<!-- Edit Btn -->
-								<a class="btn btn-warning" href="{{route('risco.edit',[$risco->id])}}">Editar</a>
+								<a class="btn btn-warning" href="{{route('activo.risco.edit',[$risco->activo_id, $risco->id])}}">Editar</a>
 
 								<!-- Add Btn -->
 								<a class="btn btn-success" href="{{route('risco.trata.create',[$risco->id])}}">Acidionar Tratamento</a>

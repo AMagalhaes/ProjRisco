@@ -29,7 +29,6 @@ Route::resource('risco.trata', 'TratamentoController');
 // Tratamento
 Route::resource('trata', 'TratamentoController');
 
-
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

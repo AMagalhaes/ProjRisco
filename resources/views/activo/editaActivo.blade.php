@@ -5,7 +5,17 @@
 	<h1> Activos</h1>
 	<hr/>
 </div>
-
+<div class="container">
+    {!! Form::open(['route' => ['activo.index'], 'method' => 'GET']) !!}
+    <div>
+        <div class="form-group">
+            {!! Form::label('localizacao', 'Localização:') !!}
+            {!! Form::select('localizacaoFilter', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], ['class'=> 'form-control']) !!}
+            <button class="btn btn-primary btn-small" type="submit">Filtrar</button>
+        </div>
+    </div>
+    {!! Form::close() !!}
+</div>
 <div class="container">
 	<table class="table table-condensed">
 		<thead>
@@ -13,7 +23,7 @@
 				<th class="col-md-3">Nome do Ativo</th>
 				<th class="col-md-2">Localização do Ativo</th>
 				<th class="col-md-2">Tipo de Ativo</th>
-				<th class="col-md-1">Valor do Ativo</th>
+				<th class="col-md-1">Val. do Ativo</th>
 				<th>
 					Ações
 				</th>

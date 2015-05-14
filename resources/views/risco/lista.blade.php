@@ -9,11 +9,9 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>#ID</th>
-				<th>IdActivo</th>
+				<th>Nome Activo</th>
 				<th>Vulnerabilidade</th>
 				<th>Ameaça</th>
-				<th>Consequencia</th>
 				<th>Probabilidade</th>
 				<th>Impacto</th>
 				<th>
@@ -25,11 +23,9 @@
 		<tbody>
 			@foreach ($riscos as $risco)
 				<tr>
-					<td>{{$risco->id}}</td>
-					<td>{{$risco->id_activo}}</td>
+					<td>{{$risco->nome}}</td>
 					<td>{{$risco->vulnerabilidade}}</td>
 					<td>{{$risco->ameaca}}</td>
-					<td>{{$risco->consequencia}}</td>
 					<td>{{$risco->probabilidade}}</td>
 					<td>{{$risco->impacto}}</td>
 						<td>
@@ -48,8 +44,6 @@
 				</tr>
 			@endforeach
 		</tbody>
-
-
 
 	</table>
 	<hr/>

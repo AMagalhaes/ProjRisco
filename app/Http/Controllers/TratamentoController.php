@@ -20,7 +20,7 @@ class TratamentoController extends Controller {
 	{
 		$tratams = Tratamento::all();
 
-		return view('trata.editaTrata', compact('tratams'));
+		return view('trata.listaTrata', compact('tratams'));
 	}
 
 	/**

@@ -42,14 +42,12 @@
 
                 <div class="form-group">
                     {!! Form::label('probabilidade', 'Probabilidade:') !!}
-                    {!! Form::select('probabilidade',['', 'Baixa','Media','Alta','Muito Alta'], null, ['class'=>
-                    'form-control']) !!}
+                    {!! Form::select('probabilidade',['', 'Muito Alta','Alta','Normal','Baixa', 'Muito Baixa'], null, ['class'=>'form-control']) !!}
                 </div>
 
                 <div class="form-group">
                     {!! Form::label('impacto', 'Impacto:') !!}
-                    {!! Form::select('impacto',['', 'Muito Alto','Alto','Baixo','Muito Baixo'], null, ['class'=>
-                    'form-control']) !!}
+                    {!! Form::select('impacto',['', 'Elevado','Alto','Médio','Baixo', 'Reduzido'], null, ['class'=>'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-4">

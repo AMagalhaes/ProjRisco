@@ -37,7 +37,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="{{ url('/') }}">Ínicio</a></li>
 				<li><a href="{{ route('activo.create') }}">Registo</a></li>
-				<li><a href="{{ route('activo.index') }}">Inventário</a></li>
+				<li><a href="{{ route('activo.index') }}">Ativos</a></li>
 				<li><a href="{{ route('risco.index') }}">Riscos</a></li>
 				<li><a href="{{ route('trata.index') }}">Controlos</a></li>
 				<li><a href="{{ url('/') }}">Análise</a></li>

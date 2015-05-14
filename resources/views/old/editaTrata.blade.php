@@ -10,7 +10,6 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>#ID </th>
 				<th>Descrição</th>
 				<th>idRisco</th>
 				<th>Controlo</th>
@@ -24,7 +23,6 @@
 		<tbody>
 			@foreach ($tratams as $trata)
 			<tr>
-				<td>{{$trata->id}}</td>
 				<td>{{$trata->descricao}}</td>
 				<td>{{$trata->idRisco}}</td>
 				<td>{{$trata->controlo}}</td>

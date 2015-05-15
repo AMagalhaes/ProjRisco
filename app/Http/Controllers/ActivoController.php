@@ -24,7 +24,7 @@ class ActivoController extends Controller {
 			$activos = Activo::all();
 		}
 
-		return view('activo.listaActivos', compact('activos'));
+		return view('activo.editaActivo', compact('activos'));
 	}
 
 	/**

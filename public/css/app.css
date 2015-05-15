@@ -6279,3 +6279,7 @@ h1{
 .container p{
   color: #FFFFFF;
 }
+
+.btn-xs{
+  background-color: #FFFF00;
+}

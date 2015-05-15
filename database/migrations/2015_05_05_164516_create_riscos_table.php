@@ -20,6 +20,10 @@ class CreateRiscosTable extends Migration {
 			$table->string('consequencia');
 			$table->integer('probabilidade');
 			$table->integer('impacto');
+<<<<<<< HEAD
+			$table->integer('cat_risco');
+=======
+>>>>>>> Carregamento da lista de risco para analise
 			$table->string('obs_final');
 			$table ->integer('cat_risco');
 			$table->integer('activo_id')->unsigned();

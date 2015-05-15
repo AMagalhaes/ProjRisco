@@ -40,7 +40,7 @@
 				<li><a href="{{ route('activo.index') }}">Ativos</a></li>
 				<li><a href="{{ route('risco.index') }}">Riscos</a></li>
 				<li><a href="{{ route('trata.index') }}">Controlos</a></li>
-				<li><a href="{{ url('/') }}">Análise</a></li>
+				<li><a href="{{ route('activo.risco.tratamento.index') }}">Análise</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">

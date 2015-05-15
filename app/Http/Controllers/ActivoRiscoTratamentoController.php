@@ -4,8 +4,13 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
-class ActRisTraControler extends Controller {
+use App\Risco;
+use App\Activo;
+use App\Tratamento;
+
+class ActivoRiscoTratamentoController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +19,10 @@ class ActRisTraControler extends Controller {
 	 */
 	public function index()
 	{
-		//
+		$activos = Activo::all();
+		$riscos = Risco::all();
+		$trata =Tratamento::all();
+		return view('analise.analiseFinal', compact('activos','riscos','trata'));
 	}
 
 	/**

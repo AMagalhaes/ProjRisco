@@ -35,10 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-<<<<<<< HEAD
-=======
-      <file leaf-file-name="risco.blade.php" pinned="false" current-in-tab="false">
->>>>>>> comit database
       <file leaf-file-name="adiciona.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/risco/adiciona.blade.php">
           <provider selected="true" editor-type-id="text-editor">

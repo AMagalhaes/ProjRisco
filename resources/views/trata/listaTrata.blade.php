@@ -13,7 +13,7 @@
             <th>idRisco</th>
             <th>Controlo</th>
             <th>Beneficios</th>
-            <th>
+            <th class="text-center">
                 Ações
             </th>
         </tr>
@@ -27,7 +27,7 @@
             <td>{{$trata->controlo}}</td>
             <td>{{$trata->beneficios}}</td>
 
-            <td>
+            <td class="text-center">
                 {!! Form::open(['route' => array('trata.destroy', $trata->id), 'method' => 'delete']) !!}
                 <!-- Show -->
                 <a href="{{ route('trata.show', [$trata->id]) }}" class="btn btn-primary">Ver</a>

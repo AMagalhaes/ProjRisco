@@ -18,8 +18,9 @@ class CreateRiscosTable extends Migration {
 			$table->string('vulnerabilidade');
 			$table->string('ameaca');
 			$table->string('consequencia');
-			$table->string('probabilidade');
-			$table->string('impacto');
+			$table->integer('probabilidade');
+			$table->integer('impacto');
+			$table->integer('cat_risco');
 			$table->string('obs_final');
 
 			$table->integer('activo_id')->unsigned();

@@ -25,4 +25,16 @@ class Risco extends Model {
 		return $this->belongsTo('App\Activo');
 	}
 
+	public function devVal($id) {
+		$linha = Activo::find($id);
+
+		return $linha->valor;
+	}
+
+	public function recalcImpotancia() {
+
+		$this->cat_risco = $this->impacto * $this->probabilidade * $this->devVal($this->activo_id);
+		$this->save();
+	}
+
 }

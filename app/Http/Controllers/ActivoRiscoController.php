@@ -45,7 +45,7 @@ class ActivoRiscoController extends Controller {
 		// obtem o activo e associo o risco
 		Activo::find($idActivo)->riscos()->save($risco);
 
-		$risco->activo->recalcImpotancia();
+		$risco->recalcImpotancia();
 
 		return redirect()->route('risco.index');
 	}
@@ -87,7 +87,7 @@ class ActivoRiscoController extends Controller {
 		$risco->save();
 
 		// recalcula a importancia do activo
-		$risco->activo->recalcImpotancia();
+		$risco->recalcImpotancia();
 
 		return redirect()->route('risco.index');
 	}
@@ -103,7 +103,7 @@ class ActivoRiscoController extends Controller {
 		$risco = Risco::find($id);
 		$risco->delete();
 
-		$risco->activo->recalcImpotancia();
+		$risco->recalcImpotancia();
 
 		return redirect()->back();
 	}

@@ -16,7 +16,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<!-- Contextual button for informational alert messages -->
-						<button type="button" class="btn btn-xs" onclick="alert('Identidique de forma clara o ativo que pretende registar.')">i</button>
+						<button type="button" class="btn btn-xs" onclick="alert('Preenche este campo de forma clara com o nome do ativo que pretende registar.')">i</button>
 						{!! Form::label('nome', 'Nome do Activo:') !!}
 						{!! Form::text('nome',null, ['class'=> 'form-control']) !!}
 					</div>
@@ -25,7 +25,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<!-- Contextual button for informational alert messages -->
-						<button type="button" class="btn btn-xs" onclick="alert('Avaliação do ativo numa escala de 1 a 100. Esta avaliação deve ter em consideração a importância deste ativo para a estrutura e processos. Também deve ter em atenção a dimensão do impacto negativo em caso de falha.')">i</button>
+						<button type="button" class="btn btn-xs" onclick="alert('Avalia o ativo numa escala de 1 a 100. Esta avaliação deve ter em consideração a importância deste ativo para a estrutura e respetivos processos. Também deves ter em atenção a dimensão do impacto negativo em caso de falha.')">i</button>
 						{!! Form::label('valor', 'Valor do Ativo:') !!}
 						{!! Form::text('valor', null, ['class'=> 'form-control']) !!}
 					</div>
@@ -37,7 +37,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<!-- Contextual button for informational alert messages -->
-						<button type="button" class="btn btn-xs" onclick="alert('Identifica a que departamento ou localização física pertence o ativo.')">i</button>
+						<button type="button" class="btn btn-xs" onclick="alert('Indica a que departamento ou localização física pertence este ativo.')">i</button>
 						{!! Form::label('localizacao', 'Localização:') !!}
 						{!! Form::select('localizacao',['', 'DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], null, ['class'=> 'form-control']) !!}
 					</div>
@@ -46,7 +46,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<!-- Contextual button for informational alert messages -->
-						<button type="button" class="btn btn-xs" onclick="alert('Indique qual o tipo de ativo que pertence o mesmo.')">i</button>
+						<button type="button" class="btn btn-xs" onclick="alert('Indica qual o tipo de ativo que pertence o mesmo.')">i</button>
 						{!! Form::label('tipo', 'Tipo Ativo:') !!}
 						{!! Form::select('tipo', ['', 'Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], null, ['class'=> 'form-control']) !!}
 					</div>

@@ -12,8 +12,8 @@
 				<th>Nome Activo</th>
 				<th>Vulnerabilidade</th>
 				<th>Ameaça</th>
-				<th>Probabilidade</th>
-				<th>Impacto</th>
+				<th class="text-center">Probabilidade</th>
+				<th class="text-center">Impacto</th>
 				<th>
 					Ações
 				</th>
@@ -26,8 +26,8 @@
 					<td>{{$risco->nome}}</td>
 					<td>{{$risco->vulnerabilidade}}</td>
 					<td>{{$risco->ameaca}}</td>
-					<td>{{$risco->probabilidade}}</td>
-					<td>{{$risco->impacto}}</td>
+					<td class="text-center">{{$risco->probabilidade}}</td>
+					<td class="text-center">{{$risco->impacto}}</td>
 						<td>
 							{!! Form::open(array('route' => array('activo.risco.destroy', $risco->activo_id, $risco->id), 'method' => 'delete')) !!}
 								<!-- View Btn -->

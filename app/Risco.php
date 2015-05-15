@@ -14,6 +14,7 @@ class Risco extends Model {
 		'consequencia',
 		'probabilidade',
 		'impacto',
+		'cat_risco',
 		'obs_final'
 	];
 
@@ -23,6 +24,19 @@ class Risco extends Model {
 
 	public function activo() {
 		return $this->belongsTo('App\Activo');
+	}
+
+
+	public function devVal($id) {
+		$linha = Activo::find($id);
+
+		return $linha->valor;
+	}
+
+	public function recalcImpotancia() {
+
+		$this->cat_risco = $this->impacto * $this->probabilidade * $this->devVal($this->activo_id);
+		$this->save();
 	}
 
 }

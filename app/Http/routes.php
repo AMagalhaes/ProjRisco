@@ -29,7 +29,7 @@ Route::resource('risco.trata', 'TratamentoController');
 // Tratamento
 Route::resource('trata', 'TratamentoController');
 
-// Analise Final
+// Analise
 Route::resource('activo.risco.tratamento', 'ActivoRiscoTratamentoController');
 
 Route::controllers([

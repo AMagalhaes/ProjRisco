@@ -58,6 +58,36 @@
             </div>
         </div>
 
+        <div class="container">
+          <h1> Tratamentos deste Risco</h1>
+          <hr/>
+
+        <div class="container">
+          <table class="table table-condensed">
+            <thead>
+
+
+              <tr>
+                <th class="col-md-3">Descrição</th>
+                <th class="col-md-1">Controlos</th>
+                <th class="col-md-2">Beneficios</th>
+                <th class="col-md-1">Obs.</th>
+                <th class="col-md-1">Id Risco</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach ($tratams as $trata)
+              <tr>
+                      <td>{!! $trata->descricao !!}</td>
+                      <td>{!! $trata->controlo !!}</td>
+                      <td>{!! $trata->beneficios !!}</td>
+                      <td>{!! $trata->obs_final !!}</td>
+                      <td>{!! $trata->risco_id !!}</td>
+                    </tr>
+              @endforeach
+            </tbody>
+
+          </table>
         <div class="row">
             <div class="col-md-12">
                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
@@ -68,4 +98,3 @@
         {!! Form::close() !!}
     </div>
     @endsection
-

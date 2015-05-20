@@ -54,6 +54,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+        	<h1> Riscos deste Activo</h1>
+        	<hr/>
+
+        <div class="container">
+        	<table class="table table-condensed">
+        		<thead>
+
+
+        			<tr>
+                <th class="col-md-3">Vulnerabilidade</th>
+                <th class="col-md-1">Ameaça</th>
+        				<th class="col-md-2">Probabilidade</th>
+                <th class="col-md-1">Impacto</th>
+                <th class="col-md-1">Obs.</th>
+                <th class="col-md-1">Categoria</th>
+        			</tr>
+        		</thead>
+            <tbody>
+              @foreach ($riscos as $risco)
+              <tr>
+                      <td>{!! $risco->vulnerabilidade !!}</td>
+                      <td>{!! $risco->ameaca !!}</td>
+                      <td>{!! $risco->probabilidade !!}</td>
+                      <td>{!! $risco->impacto !!}</td>
+                      <td>{!! $risco->obs_final !!}</td>
+                      <td>{!! $risco->cat_risco !!}</td>
+                    </tr>
+              @endforeach
+            </tbody>
+
+          </table>
+
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
         <a class="btn btn-primary btn-block" href="{{ route('activo.index') }}">Voltar</a>
         {!! Form::close() !!}

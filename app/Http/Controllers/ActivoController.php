@@ -8,104 +8,113 @@ use Illuminate\Support\Facades\Input;
 
 use App\Activo;
 use App\Risco;
+class ActivoController extends Controller {
 
-class ActivoController extends Controller
-{
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function index()
+	{
+		if (Input::has('localizacaoFilter') && !empty(Input::get('localizacaoFilter'))) {
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        if (Input::has('localizacaoFilter') && !empty(Input::get('localizacaoFilter'))) {
+			$activos = Activo::where('localizacao', Input::get('localizacaoFilter'))->get();
+		} else {
+			$activos = Activo::all();
+		}
 
-            $activos = Activo::where('localizacao', Input::get('localizacaoFilter'))->get();
-        } else {
-            $activos = Activo::all();
-        }
+		if (Input::has('tipoFilter') && !empty(Input::get('tipoFilter')) ) {
 
-        return view('activo.listaActivos', compact('activos'));
-    }
+			$activos = Activo::where('tipo', Input::get('tipoFilter'))->get();
+		} else {
+			$activos = Activo::all();
+		}
+		return view('activo.listaActivos', compact('activos'));
+	}
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        return view('activo.addActivo');
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function create()
+	{
+		return view('activo.addActivo');
 
-    }
+	}
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
-     */
-    public function store()
-    {
-        //$input = Request::all();
-        $activo = Activo::create(Input::all());
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		//$input = Request::all();
+		$activo = Activo::create(Input::all());
 
-        return redirect()->route('activo.index');
-    }
+		return redirect()->route('activo.index');
+	}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        return view('activo.view', ['activo' => Activo::find($id)]);
-    }
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($id)
+	{
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        $activo = Activo::findOrFail($id);
+		// fazer o get de todos os riscos
 
-        return view('activo.formEditaActivos', compact('activo'));
-    }
+		$riscos = Risco::where('activo_id',$id)->get();
+		$activo = Activo::find($id);
+		return view('activo.view', compact('riscos','activo'));
+	}
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function update($id)
-    {
-        $activo = Activo::find($id);
-        $activo->fill(Input::all());
-        $activo->save();
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function edit($id)
+	{
+		$activo = Activo::findOrFail($id);
 
-        $activo->updateRiscImportance();
+		return view ('activo.formEditaActivos', compact('activo'));
+	}
 
-        return redirect()->route('activo.index');
-    }
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id)
+	{
+		$activo = Activo::find($id);
+		$activo->fill(Input::all());
+		$activo->save();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        $activo = Activo::find($id);
-        $activo->delete();
+		$activo->recalcImpotancia();
 
-        return redirect()->back();
-    }
+		return redirect()->route('activo.index');
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		$activo = Activo::find($id);
+		$activo->delete();
+
+		return redirect()->back();
+	}
 
 }

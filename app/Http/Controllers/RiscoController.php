@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 
 use App\Risco;
 use App\Activo;
-
+use App\Tratamento;
 class RiscoController extends Controller {
 
 	/**
@@ -30,7 +30,10 @@ class RiscoController extends Controller {
 	 */
 	public function show($id)
 	{
-		return view('risco.view', ['risco' => Risco::find($id)]);
+		$tratams = Tratamento::where('risco_id',$id)->get();
+		$risco = Risco::find($id);
+		return view('risco.view', compact('risco','tratams'));
+		//return view('risco.view', ['risco' => Risco::find($id),'$tratams']);
 	}
 
 	/**

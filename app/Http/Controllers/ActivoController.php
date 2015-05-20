@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
 use App\Activo;
-
+use App\Risco;
 class ActivoController extends Controller {
 
 	/**
@@ -24,6 +24,12 @@ class ActivoController extends Controller {
 			$activos = Activo::all();
 		}
 
+		if (Input::has('tipoFilter') && !empty(Input::get('tipoFilter')) ) {
+
+			$activos = Activo::where('tipo', Input::get('tipoFilter'))->get();
+		} else {
+			$activos = Activo::all();
+		}
 		return view('activo.listaActivos', compact('activos'));
 	}
 
@@ -59,7 +65,12 @@ class ActivoController extends Controller {
 	 */
 	public function show($id)
 	{
-		return view('activo.view', ['activo' => Activo::find($id)]);
+
+		// fazer o get de todos os riscos
+
+		$riscos = Risco::where('activo_id',$id)->get();
+		$activo = Activo::find($id);
+		return view('activo.view', compact('riscos','activo'));
 	}
 
 	/**

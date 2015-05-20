@@ -4,17 +4,26 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Activo extends Model {
+class Activo extends Model
+{
 
-	protected $fillable = [
-		'nome',
-		'valor',
-		'obs',
-		'localizacao',
-		'tipo'
-	];
+    protected $fillable = [
+        'nome',
+        'valor',
+        'obs',
+        'localizacao',
+        'tipo'
+    ];
 
-	public function riscos() {
-		return $this->hasMany('App\Risco');
-	}
+    public function riscos()
+    {
+        return $this->hasMany('App\Risco');
+    }
+
+    public function updateRiscImportance()
+    {
+        foreach ($this->riscos as $risco) {
+            $risco->recalcImpotancia();
+        }
+    }
 }

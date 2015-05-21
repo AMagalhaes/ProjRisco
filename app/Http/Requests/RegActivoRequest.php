@@ -2,6 +2,8 @@
 
 use App\Http\Requests\Request;
 
+use Illuminate\Support\Facades\Input;
+
 class RegActivoRequest extends Request {
 
 	/**
@@ -23,7 +25,7 @@ class RegActivoRequest extends Request {
 	{
 		return [
 			'nome' => 'required',
-			'valor' => 'required|digits_between:0,100',
+			'valor' => 'required|numeric|between:1,100',
 			'localizacao' => 'required',
 			'tipo' => 'required'
 		];

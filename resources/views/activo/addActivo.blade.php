@@ -39,7 +39,7 @@
 						<!-- Contextual button for informational alert messages -->
 						<button type="button" class="btn btn-xs" onclick="alert('Indica a que departamento ou localização física pertence este ativo.')">i</button>
 						{!! Form::label('localizacao', 'Localização:') !!}
-						{!! Form::select('localizacao',['', 'DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], null, ['class'=> 'form-control']) !!}
+						{!! Form::select('localizacao',['DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], null, ['class'=> 'form-control']) !!}
 					</div>
 				</div>
 
@@ -48,7 +48,7 @@
 						<!-- Contextual button for informational alert messages -->
 						<button type="button" class="btn btn-xs" onclick="alert('Indica qual o tipo de ativo que pertence o mesmo.')">i</button>
 						{!! Form::label('tipo', 'Tipo Ativo:') !!}
-						{!! Form::select('tipo', ['', 'Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], null, ['class'=> 'form-control']) !!}
+						{!! Form::select('tipo', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], null, ['class'=> 'form-control']) !!}
 					</div>
 				</div>
 			</div>

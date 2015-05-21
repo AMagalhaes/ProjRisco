@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 
 use App\Risco;
 use App\Activo;
-
+use App\Tratamento;
 class ActivoRiscoController extends Controller {
 
 	/**
@@ -37,7 +37,7 @@ class ActivoRiscoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store($idActivo)
+	public function store($idActivo, Requests\RegRiscoRequest $request )
 	{
 		// cria o risco
 		$risco = new Risco(Input::all());
@@ -100,12 +100,16 @@ class ActivoRiscoController extends Controller {
 	 */
 	public function destroy($idActivo, $id)
 	{
+
+		if(Tratamento::where('risco_id',$id)->get()){
+			return redirect('risco')->with('message', 'Não pode apagar um Activo com riscos definidos');
+		}
+
 		$risco = Risco::find($id);
 		$risco->delete();
 
-		$risco->recalcImpotancia();
+		//$risco->recalcImpotancia();
 
 		return redirect()->back();
 	}
-
 }

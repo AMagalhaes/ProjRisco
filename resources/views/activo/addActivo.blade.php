@@ -27,7 +27,7 @@
 						<!-- Contextual button for informational alert messages -->
 						<button type="button" class="btn btn-xs" onclick="alert('Avalia o ativo numa escala de 1 a 100. Esta avaliação deve ter em consideração a importância deste ativo para a estrutura e respetivos processos. Também deves ter em atenção a dimensão do impacto negativo em caso de falha.')">i</button>
 						{!! Form::label('valor', 'Valor do Ativo:') !!}
-						{!! Form::text('valor', null, ['class'=> 'form-control']) !!}
+						{!! Form::text('valor', null, ['class'=> 'form-control', 'min' => '0', 'max' => '100']) !!}
 					</div>
 				</div>
 			</div>
@@ -69,5 +69,15 @@
 		{!! Form::close() !!}
 	</div>
 </div>
-@endsection
 
+
+@if ($errors -> any())
+<script type='text/javascript'>alert('tem campos por preencher');</script>
+	<ul>
+			@foreach($errors->all() as $error)
+			  <?php	$myArray = explode(' ', $error); ?>
+		 		<li style="color:red"><font size='3'>Tem de preencher o campo</font> <font size='5'><strong>{{$myArray[1]}}</strong></font></li>
+			@endforeach
+				</ul>
+@endif
+@endsection

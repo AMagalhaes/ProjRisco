@@ -1367,6 +1367,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 50px;
 }
 
 .container table{
@@ -6262,6 +6263,10 @@ h1{
   font-size: 100px;
 }
 
+h2{
+  color: #FFFFFF;
+}
+
 .form-group p {
   width: 50%;
   margin: 0 auto;
@@ -6282,4 +6287,31 @@ h1{
 
 .btn-xs{
   background-color: #FFFF00;
+}
+
+.sucesso{
+  color: black;
+  background-color: green;
+}
+
+.ativo{
+  color: black;
+  background-color: yellow;
+}
+
+.cuidado{
+  color: black;
+  background-color: orange;
+}
+
+.perigo{
+  color: black;
+  background-color: red;
+}
+
+.graph {
+
+  margin: 0 auto;
+  width: 100%;
+  height: 400px;
 }

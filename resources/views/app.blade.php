@@ -8,6 +8,7 @@
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{ asset('/imgs/logoPorto.png') }}">
+	<script src="Chart.js"></script>
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -41,6 +42,8 @@
 				<li><a href="{{ route('risco.index') }}">Riscos</a></li>
 				<li><a href="{{ route('trata.index') }}">Controlos</a></li>
 				<li><a href="{{ route('activo.risco.tratamento.index') }}">Análise</a></li>
+				<li><a href="{{ route('charts.index') }}">Estatísticas</a></li>
+
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">

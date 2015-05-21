@@ -17,19 +17,20 @@ class ActivoController extends Controller {
 	 */
 	public function index()
 	{
+		$activos = Activo::orderBy('id');
+
 		if (Input::has('localizacaoFilter') && !empty(Input::get('localizacaoFilter'))) {
 
-			$activos = Activo::where('localizacao', Input::get('localizacaoFilter'))->get();
-		} else {
-			$activos = Activo::all();
+			$activos->where('localizacao', Input::get('localizacaoFilter'));
 		}
 
 		if (Input::has('tipoFilter') && !empty(Input::get('tipoFilter')) ) {
 
-			$activos = Activo::where('tipo', Input::get('tipoFilter'))->get();
-		} else {
-			$activos = Activo::all();
+			$activos->where('tipo', Input::get('tipoFilter'));
 		}
+
+		$activos = $activos->get();
+
 		return view('activo.listaActivos', compact('activos'));
 	}
 

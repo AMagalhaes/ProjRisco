@@ -6,25 +6,15 @@
 	<hr/>
 </div>
 
-
-
-
-<h3 > Fazer clear aos botões porque inflr+uencia um ao outro ao depois de filtrar</h3>
-
-
-
-
 <div class="container">
     {!! Form::open(['route' => ['activo.index'], 'method' => 'GET']) !!}
     <div>
         <div class="form-group">
             {!! Form::label('localizacao', 'Localização:') !!}
-						{!! Form::select('localizacaoFilter',['Todos', 'DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], ['class'=> 'form-control']) !!}
-
-            <button class="btn btn-primary btn-small" type="submit">Filtrar</button>
+			{!! Form::select('localizacaoFilter',['Todos', 'DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], ['class'=> 'form-control']) !!}
 
             {!! Form::label('tipo', 'Tipo:') !!}
-						{!! Form::select('tipoFilter',['Todos', 'Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], ['class'=> 'form-control']) !!}
+			{!! Form::select('tipoFilter',['Todos', 'Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], ['class'=> 'form-control']) !!}
 
             <button class="btn btn-primary btn-small" type="submit">Filtrar</button>
         </div>

@@ -1,38 +1,34 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+Route::group(['middleware' => 'auth'], function () {
+    // Home
+    Route::get('/', 'HomeController@index');
 
-Route::get('/', 'HomeController@index');
+    //Activos
+    Route::resource('activo', 'ActivoController');
 
+    //Graficos
+    Route::resource('charts', 'ChartController');
 
-//Activos
-Route::resource('activo', 'ActivoController');
+    // Riscos
+    Route::resource('risco', 'RiscoController', ['except' => 'create']);
 
-// Riscos
-Route::resource('risco', 'RiscoController', ['except' => 'create']);
+    // Activos - Riscos
+    Route::resource('activo.risco', 'ActivoRiscoController');
 
-// Activos - Riscos
-Route::resource('activo.risco', 'ActivoRiscoController');
+    // Risco - Tratamento
+    Route::resource('risco.trata', 'TratamentoController');
 
-// Risco - Tratamento
-Route::resource('risco.trata', 'TratamentoController');
+    // Tratamento
+    Route::resource('trata', 'TratamentoController');
 
-// Tratamento
-Route::resource('trata', 'TratamentoController');
+    // Analise
+    Route::resource('activo.risco.tratamento', 'ActivoRiscoTratamentoController');
 
-// Analise
-Route::resource('activo.risco.tratamento', 'ActivoRiscoTratamentoController');
+});
 
+// Auth
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);

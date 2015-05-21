@@ -38,7 +38,7 @@ class TratamentoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store($idRisco)
+	public function store($idRisco, Requests\RegTrataRequest $request )
 	{
 		// cria o tratamento
 		$trata = new Tratamento(Input::all());

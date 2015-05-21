@@ -6,6 +6,12 @@
   	<h1>Riscos</h1>
 	</div>
 
+	@if (Session::has('message'))
+	<div class="alert alert-danger">
+		{{Session::get('message')}}
+	</div>
+	@endif
+
 	<table class="table">
 		<thead>
 			<tr>

@@ -81,4 +81,14 @@
         </div>
         {!! Form::close() !!}
     </div>
+
+    @if ($errors -> any())
+    <script type='text/javascript'>alert('tem campos por preencher');</script>
+    	<ul>
+    			@foreach($errors->all() as $error)
+    			  <?php	$myArray = explode(' ', $error); ?>
+    		 		<li style="color:red"><font size='3'>Tem de preencher o campo</font> <font size='5'><strong>{{$myArray[1]}}</strong></font></li>
+    			@endforeach
+    				</ul>
+    @endif
     @endsection

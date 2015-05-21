@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 
 use App\Activo;
 use App\Risco;
+use App\Tratamento;
 class ActivoController extends Controller {
 
 	/**
@@ -24,7 +25,7 @@ class ActivoController extends Controller {
 			$activos = Activo::all();
 		}
 
-		if (Input::has('tipoFilter') && !empty(Input::get('tipoFilter')) ) {
+		if (Input::has('tipoFilter') && !empty(Input::get('tipoFilter'))) {
 
 			$activos = Activo::where('tipo', Input::get('tipoFilter'))->get();
 		} else {
@@ -49,7 +50,7 @@ class ActivoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Requests\RegActivoRequest $request)
 	{
 		//$input = Request::all();
 		$activo = Activo::create(Input::all());
@@ -111,6 +112,13 @@ class ActivoController extends Controller {
 	 */
 	public function destroy($id)
 	{
+		//if(Tratamento::where('risco_id',$id)->get()){
+		//	?>
+		//		<script type='text/javascript'>alert('Não pode apagar um Activo com riscos definidos');</script>
+			//<?php
+	//	return {{ route('activo.index') }};
+		//return redirect()->back();
+	//	}
 		$activo = Activo::find($id);
 		$activo->delete();
 

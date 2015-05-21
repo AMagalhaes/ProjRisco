@@ -59,7 +59,7 @@
         </div>
 
         <div class="container">
-          <h1> Tratamentos deste Risco</h1>
+          <h1> Controlos</h1>
           <hr/>
 
         <div class="container">
@@ -68,21 +68,29 @@
 
 
               <tr>
-                <th class="col-md-3">Descrição</th>
-                <th class="col-md-1">Controlos</th>
-                <th class="col-md-2">Beneficios</th>
-                <th class="col-md-1">Obs.</th>
-                <th class="col-md-1">Id Risco</th>
+                <th class="col-md-1, text-center">Id Risco</th>
+                <th class="col-md-5">Descrição</th>
+                <th class="col-md-4">Controlo</th>
+                <th class="text-center">Ações</th>
               </tr>
             </thead>
             <tbody>
               @foreach ($tratams as $trata)
               <tr>
+                <td  class="text-center">{!! $trata->risco_id !!}</td>
                       <td>{!! $trata->descricao !!}</td>
                       <td>{!! $trata->controlo !!}</td>
-                      <td>{!! $trata->beneficios !!}</td>
-                      <td>{!! $trata->obs_final !!}</td>
-                      <td>{!! $trata->risco_id !!}</td>
+                      <td class="text-center">
+                          {!! Form::open(['route' => array('trata.destroy', $trata->id), 'method' => 'delete']) !!}
+                          <!-- Show -->
+                          <a href="{{ route('trata.show', [$trata->id]) }}" class="btn btn-primary">Ver</a>
+
+                          <!-- Edit -->
+                          <a href="{{ route('trata.edit', [$trata->id]) }}" class="btn btn-warning">Editar</a>
+
+                          <button type="submit" class="btn btn-danger">Remover</button>
+                          {!! Form::close() !!}
+                      </td>
                     </tr>
               @endforeach
             </tbody>

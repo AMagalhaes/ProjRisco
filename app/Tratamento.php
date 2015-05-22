@@ -17,7 +17,7 @@ class Tratamento extends Model
 
     public function risco()
     {
-        return $this->belongsTo('App\Tratamento');
+        return $this->belongsTo('App\Risco');
     }
 
 }

@@ -73,6 +73,9 @@ class RiscoController extends Controller {
 	 */
 	public function destroy($id)
 	{
+		if(Tratamento::where('risco_id',$id)->get()){
+			return redirect('risco')->with('message', 'Não pode apagar um Risco com Controlos definidos');
+		}
 		$risco = Risco::find($id);
 		$risco->delete();
 

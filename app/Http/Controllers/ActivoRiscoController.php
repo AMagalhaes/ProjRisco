@@ -100,9 +100,11 @@ class ActivoRiscoController extends Controller {
 	 */
 	public function destroy($idActivo, $id)
 	{
+		$trata_d = Tratamento::where('risco_id',$id)->get()->toArray();
+		//dd(count($te));
 
-		if(Tratamento::where('risco_id',$id)->get()){
-			return redirect('risco')->with('message', 'Não pode apagar um Activo com riscos definidos');
+		if(count($trata_d) > 0){
+			return redirect('risco')->with('message', 'Não pode apagar um Risco com Controlos definidos');
 		}
 
 		$risco = Risco::find($id);

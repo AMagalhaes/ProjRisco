@@ -6263,7 +6263,7 @@ h1{
   font-size: 100px;
 }
 
-h2{
+h2, h3{
   color: #FFFFFF;
 }
 
@@ -6314,4 +6314,15 @@ h2{
   margin: 0 auto;
   width: 100%;
   height: 400px;
+}
+
+.infoP{
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: justify;
+}
+
+ul{
+  color: #FFFFFF;
+  margin-left: 350px;
 }

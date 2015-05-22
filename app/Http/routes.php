@@ -10,6 +10,9 @@ Route::group(['middleware' => 'auth'], function () {
     //Graficos
     Route::resource('charts', 'ChartController');
 
+    //Informações
+    Route::resource('infoInicio', 'infoController@index');
+
     // Riscos
     Route::resource('risco', 'RiscoController', ['except' => 'create']);
 

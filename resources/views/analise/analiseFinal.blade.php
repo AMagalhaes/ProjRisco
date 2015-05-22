@@ -2,9 +2,8 @@
 
 @section('content')
 <div class="container">
-    <h1> Analise Final</h1>
+    <h2> Analise dos riscos</h2>
     <hr/>
-
     <div class="container">
         <table class="table table-condensed">
             <thead>

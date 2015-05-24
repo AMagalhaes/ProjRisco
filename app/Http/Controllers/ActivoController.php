@@ -112,13 +112,12 @@ class ActivoController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//if(Tratamento::where('risco_id',$id)->get()){
-		//	?>
-		//		<script type='text/javascript'>alert('Não pode apagar um Activo com riscos definidos');</script>
-			//<?php
-	//	return {{ route('activo.index') }};
-		//return redirect()->back();
-	//	}
+		$risco_d = Risco::where('activo_id',$id)->get()->toArray();
+		//dd(count($te));
+
+		if(count($risco_d) > 0){
+			return redirect('activo')->with('message', 'Não pode apagar um Activo com Riscos definidos');
+		}
 		$activo = Activo::find($id);
 		$activo->delete();
 

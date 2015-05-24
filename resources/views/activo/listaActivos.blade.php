@@ -6,6 +6,12 @@
 	<hr/>
 </div>
 
+@if (Session::has('message'))
+<div class="alert alert-danger">
+	{{Session::get('message')}}
+</div>
+@endif
+
 <div class="container">
     {!! Form::open(['route' => ['activo.index'], 'method' => 'GET']) !!}
     <div>

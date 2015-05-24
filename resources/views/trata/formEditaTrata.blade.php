@@ -16,14 +16,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    {!! Form::label('idTrata', 'Id do Activo:') !!}
-                    {!! Form::text('idTrata',$trata->id, ['class'=> 'form-control']) !!}
+                    {!! Form::label('idTrata', 'Activo:') !!}
+                    {!! Form::text('idTrata',$trata->risco->activo->nome, ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    {!! Form::label('risco_id', 'IdRisco:') !!}
-                    {!! Form::text('risco_id',$trata->risco_id, ['class'=> 'form-control']) !!}
+                    {!! Form::label('risco_id', 'Risco:') !!}
+                    {!! Form::text('risco_id',$trata->risco->vulnerabilidade, ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
             </div>
         </div>
@@ -60,8 +60,3 @@
     </div>
 </div>
 @endsection
-
-
-
-
-

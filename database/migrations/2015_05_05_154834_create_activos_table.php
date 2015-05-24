@@ -19,6 +19,9 @@ class CreateActivosTable extends Migration {
 			$table->integer('valor');
 			$table->string('obs');
 			$table->string('localizacao');
+			$table->integer('disponibilidade');
+			$table->integer('integridade');
+			$table->integer('confidencialidade');
 			$table->string('tipo');
 			$table->timestamps();
 		});

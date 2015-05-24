@@ -108,7 +108,6 @@ class ActivoRiscoController extends Controller {
 		$risco = Risco::find($id);
 		$risco->delete();
 
-		//$risco->recalcImpotancia();
 
 		return redirect()->back();
 	}

@@ -10,6 +10,9 @@ class Activo extends Model
     protected $fillable = [
         'nome',
         'valor',
+        'disponibilidade',
+        'integridade',
+        'confidencialidade',
         'obs',
         'localizacao',
         'tipo'
@@ -25,5 +28,11 @@ class Activo extends Model
         foreach ($this->riscos as $risco) {
             $risco->recalcImpotancia();
         }
+    }
+
+    public function calcValorAtivo()
+    {
+        $this->valor = ($this->disponibilidade * 0.6) + ($this->integridade * 0.2) + ($this->confidencialidade * 0.2);
+        return $this->valor;
     }
 }

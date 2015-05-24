@@ -18,8 +18,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-xs" onclick="alert('Este campo identifica o nome do ativo para o qual vai registar um risco.')">i</button>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
+                            data-content="Este campo identifica o nome do ativo para o qual vai registar um risco.">i
+                    </button>
                     {!! Form::label('nomeActivo', 'Nome do Activo:') !!}
                     {!! Form::text('nomeActivo', $activo->nome, ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
@@ -28,44 +29,54 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-xs" onclick="alert('Este campo destina-se a descrever de forma clara a vulnerabilidade que o ativo em causa está exposto. ex: Humidade, pó, bactérias...')">i</button>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Vulnerabilidade"
+                            data-content="Este campo destina-se a descrever de forma clara a vulnerabilidade que o ativo em causa está exposto. ex: Humidade, pó,
+                            bactérias...">i
+                    </button>
                     {!! Form::label('vulnerabilidade', 'Vulnerabilidade:') !!}
                     {!! Form::textarea('vulnerabilidade',null, ['class'=> 'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-xs" onclick="alert('Este campo destina-se a descrever potenciais ameaças para o ativo em função da vulnerabilidade descrita neste formulário e que poderá prejudicar o normal funcionamento das suas funções (ativo). ex: Inundação, fogo, explosão, intoxicação alimentar...')">i</button>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
+                            data-content="Este campo destina-se a descrever potenciais ameaças para o ativo em função da vulnerabilidade descrita neste formulário
+                            e que poderá prejudicar o normal funcionamento das suas funções (ativo). ex: Inundação, fogo, explosão, intoxicação alimentar...">i
+                    </button>
                     {!! Form::label('ameaca', 'Ameaça:') !!}
                     {!! Form::textarea('ameaca',null, ['class'=> 'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-xs" onclick="alert('Este campo destina-se a descrever consequências que poderão advir da vulnarabilidade e ameaça identificadas neste formulário. ex: Imagem da entidade, doenças, integridaade fisica, falha de serviços...')">i</button>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
+                            data-content="Este campo destina-se a descrever consequências que poderão advir da vulnarabilidade e ameaça identificadas neste
+                            formulário. ex: Imagem da entidade, doenças, integridaade fisica, falha de serviços...">i
+                    </button>
                     {!! Form::label('consequencia', 'Consequencia:') !!}
                     {!! Form::textarea('consequencia',null, ['class'=> 'form-control']) !!}
                 </div>
-
                 <div class="form-group">
-                    <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-xs" onclick="alert('Indica a probabilidade de acontecer a situação registada neste formulário e que considera ajustada.')">i</button>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
+                            data-content="Indica a probabilidade de acontecer a situação registada neste formulário e que considera ajustada.">i
+                    </button>
                     {!! Form::label('probabilidade', 'Probabilidade:') !!}
                     {!! Form::select('probabilidade',['', 'Muito Baixa','Baixa','Normal','Alta', 'Muito Alta'], null, ['class'=>'form-control']) !!}
                 </div>
 
                 <div class="form-group">
-                    <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-xs" onclick="alert('Indica a dimensão do impacto que considera ajustado e que poderá ter a estrutura e o normal funcionamento de todos os processos, caso aconteça a situação registada neste formulário.')">i</button>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
+                            data-content="Indica a dimensão do impacto que considera ajustado e que poderá ter a estrutura e o normal funcionamento de
+                            todos os processos, caso aconteça a situação registada neste formulário.">i
+                    </button>
                     {!! Form::label('impacto', 'Impacto:') !!}
                     {!! Form::select('impacto',['', 'Reduzido','Baixo','Médio','Alto', 'Elevado'], null, ['class'=>'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn btn-xs" onclick="alert('Este campo destina-se a que sejam registadas eventuais observações pertinentes na ajuda e esclarecimento de informação adicional relevante.')">i</button>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
+                            data-content="Este campo destina-se a que sejam registadas eventuais observações pertinentes na ajuda e esclarecimento de informação
+                            adicional relevante.">i
+                    </button>
                     {!! Form::label('obsFinalR', 'Observações:') !!}
                     {!! Form::textarea('obsFinalR',null, ['class'=> 'form-control']) !!}
                 </div>
@@ -91,4 +102,11 @@
     			@endforeach
     				</ul>
     @endif
+
+    // Script que permite executar as janelas de informação
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
     @endsection

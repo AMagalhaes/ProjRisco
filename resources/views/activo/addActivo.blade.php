@@ -62,7 +62,8 @@ function getValue()
             <div class="col-md-6">
                 <div class="form-group">
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
-                            data-content="Descreve da forma mais clara possível o nome do ativo a registar para que não haja qualquer dúvida sobre o ativo a que se refere.">i
+                            data-content="Descreve da forma mais clara possível o nome do ativo a registar para que não
+                            haja qualquer dúvida sobre o ativo a que se refere.">i
                     </button>
                     <!-- Contextual button for informational alert messages -->
                     <!-- <a class="btn btn-info btn-xs" href="{{ url('/info/nome-ativo') }}">i</a> -->
@@ -122,7 +123,7 @@ function getValue()
                 <div class="form-group">
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Tipo de Ativo"
                             data-content="Indica qual o tipo de ativo que pertence o mesmo segundo as opções apresentadas.">i
-          x          </button>
+                    </button>
                     {!! Form::label('tipo', 'Tipo Ativo:') !!}
                     {!! Form::select('tipo', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano',
                     'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], null, ['class'=> 'form-control']) !!}

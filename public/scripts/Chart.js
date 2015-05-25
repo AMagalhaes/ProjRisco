@@ -106,7 +106,7 @@
 			scaleFontStyle: "normal",
 
 			// String - Scale label font colour
-			scaleFontColor: "#666",
+			scaleFontColor: "#FFFFFF",
 
 			// Boolean - whether or not the chart should be responsive and resize when the browser does.
 			responsive: false,
@@ -136,7 +136,7 @@
 			tooltipFontStyle: "normal",
 
 			// String - Tooltip label font colour
-			tooltipFontColor: "#fff",
+			tooltipFontColor: "#FFFFFF",
 
 			// String - Tooltip title font declaration for the scale label
 			tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
@@ -148,7 +148,7 @@
 			tooltipTitleFontStyle: "bold",
 
 			// String - Tooltip title font colour
-			tooltipTitleFontColor: "#fff",
+			tooltipTitleFontColor: "#FFFFFF",
 
 			// Number - pixel width of padding around tooltip text
 			tooltipYPadding: 6,

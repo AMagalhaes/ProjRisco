@@ -35,4 +35,11 @@ class Activo extends Model
         $this->valor = ($this->disponibilidade * 0.6) + ($this->integridade * 0.2) + ($this->confidencialidade * 0.2);
         return $this->valor;
     }
+    public function verificaRisco($id)
+    {
+      $activo = Risco::where('activo_id',$id)->get()->toArray();
+      if(count($activo) > 0){
+        return true;
+      }
+    }
 }

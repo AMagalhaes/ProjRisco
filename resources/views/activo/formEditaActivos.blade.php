@@ -35,7 +35,7 @@
                               disponivel quando necessário.">i
 					</button>
 					{!! Form::label('disponibilidade', 'Disponibilidade:') !!}
-					{!! Form::select('disponibilidade', [1,2,3,4,5,6,7,8,9,10], $activo->disponibilidade, ['class'=>'form-control']) !!}
+					{!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->disponibilidade, ['class'=>'form-control']) !!}
 				</div>
 			</div>
 		</div>
@@ -58,7 +58,7 @@
                             ativo quanto à sua confidencialidade.">i
 					</button>
 					{!! Form::label('confidencialidade', 'Confidencialidade:') !!}
-					{!! Form::select('confidencialidade', [1,2,3,4,5,6,7,8,9,10], $activo->confidencialidade, ['class'=>'form-control']) !!}
+					{!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->confidencialidade, ['class'=>'form-control']) !!}
 				</div>
 			</div>
 			<div class="col-md-2">
@@ -68,7 +68,7 @@
                             na confidencialidade, disponibilidade e integridade.">i
 					</button>
 					{!! Form::label('valor', 'Valor:') !!}
-					{!! Form::text('valor',$activo->valor, ['class'=> 'form-control']) !!}
+					{!! Form::text('valor',$activo->valor, ['class'=> 'form-control','disabled' => true]) !!}
 				</div>
 			</div>
 		</div>
@@ -90,7 +90,7 @@
                             ativo quanto à sua integridade.">i
 					</button>
 					{!! Form::label('integridade', 'Integridade:') !!}
-					{!! Form::select('integridade', [1,2,3,4,5,6,7,8,9,10], $activo->integridade, ['class'=>'form-control']) !!}
+					{!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->integridade , ['class'=>'form-control']) !!}
 				</div>
 			</div>
 		</div>
@@ -122,13 +122,3 @@
 </script>
 
 @endsection
-
-
-
-
-
-
-
-
-
-

@@ -114,7 +114,6 @@ class ActivoController extends Controller {
 	public function destroy($id)
 	{
 		$risco_d = Risco::where('activo_id',$id)->get()->toArray();
-		//dd(count($te));
 
 		if(count($risco_d) > 0){
 			return redirect('activo')->with('message', 'Não pode apagar um Activo com Riscos definidos');

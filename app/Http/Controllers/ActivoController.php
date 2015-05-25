@@ -53,7 +53,6 @@ class ActivoController extends Controller {
 	 */
 	public function store(Requests\RegActivoRequest $request)
 	{
-		//$input = Request::all();
 		$activo = Activo::create(Input::all());
 
 		return redirect()->route('activo.index');

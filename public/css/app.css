@@ -5611,7 +5611,7 @@ button.close {
   left: 0;
   z-index: 1060;
   display: none;
-  max-width: 276px;
+  width: 400px;
   padding: 1px;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -5625,6 +5625,7 @@ button.close {
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal;
+  text-align: justify;
 }
 .popover.top {
   margin-top: -10px;
@@ -5642,7 +5643,7 @@ button.close {
   margin: 0;
   padding: 8px 14px;
   font-size: 14px;
-  background-color: #f7f7f7;
+  background-color: #192E7D;
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
 }
@@ -6231,14 +6232,13 @@ button.close {
     display: none !important;
   }
 }
+
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---  */
+
 body
 {
   font-weight: 300;
   background: #192E7D url(../imgs/logo_bg.png) no-repeat right bottom fixed;
-
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
 
   /* Set up proportionate scaling */
   width: 100%;
@@ -6249,13 +6249,6 @@ body
   left: 0;
 
   margin-top: 30px;
-}
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  body {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
 }
 
 h1{
@@ -6286,6 +6279,7 @@ h2, h3{
 }
 
 .btn-xs{
+  color: #080808;
   background-color: #FFFF00;
 }
 

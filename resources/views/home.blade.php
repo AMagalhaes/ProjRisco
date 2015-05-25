@@ -9,7 +9,7 @@
 
 	<div class="text-center">
 		<!-- Show -->
-		<a class="text-center, btn btn-primary" href="{{ route('infoInicio.index') }}">Mais informações</a>
+		<a class="text-center, btn btn-primary" href="{{ url('/info/inicio') }}">Mais informações</a>
 	</div>
 
 

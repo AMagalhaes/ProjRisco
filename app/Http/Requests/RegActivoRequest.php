@@ -33,7 +33,9 @@ class RegActivoRequest extends Request
     {
         return [
             'nome' => 'required',
-            'valor' => 'required|numeric|between:1,100',
+            'disponibilidade' => 'required',
+            'integridade' => 'required',
+            'confidencialidade' => 'required',
             'localizacao' => 'required',
             'tipo' => 'required'
         ];

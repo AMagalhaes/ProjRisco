@@ -1,6 +1,51 @@
 @extends('app')
 
 @section('content')
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+//  function calculaValor() {
+//      var confidencialidade=document.getElementById('confidencialidade');
+//      var integridade=document.getElementById('confidencialidade');
+  //    var disponibilidade=document.getElementById('disponibilidade');
+//      alert('toninho'));
+//      return ((disponibilidade * 0.6) + (integridade * 0.2) + (confidencialidade*0.2))
+//  }
+
+
+function getValue()
+  {
+    var c=document.getElementById("confidencialidade");
+    var d=document.getElementById("disponibilidade");
+    var i=document.getElementById("integridade");
+    var x =(c.value*0.6)+(d.value*0.2)+(i.value*0.2);
+    alert(x);
+  return(((c.value*0.6)+(d.value*0.2)+(i.value*0.2)));
+  }
+
+
+  function actValor(){
+
+  }
+
+
+/*  $(document).ready(function(){
+    $("Input").focusin(function(){
+         $(this).css("background-color", "#FFFFCC");
+     });
+    $("Input").focusout(function(){
+        alert('toninho'));
+    });
+});
+*/
+
+
+
+
+</script>
+
+
 <div class="container">
 
     <h1 class="text-center">Registo de Ativos</h1>
@@ -27,14 +72,13 @@
             </div>
             <div class="col-md-2">
                 <div class="form-group">
-
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Disponibilidade"
                             data-content="Avalia o ativo a registar quanto à sua Disponibilidade numa escala de 1 a 10 em que 1 este ativo não
                             necessita de estar disponivel sempre que seja necessário e 10 significa que é fundamental que o ativo esteja sempre
                               disponivel quando necessário.">i
                     </button>
                     {!! Form::label('disponibilidade', 'Disponibilidade:') !!}
-                    {!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onfocusout'=>'getValue()']) !!}
                 </div>
             </div>
         </div>
@@ -58,7 +102,7 @@
                             ativo quanto à sua confidencialidade.">i
                     </button>
                     {!! Form::label('confidencialidade', 'Confidencialidade:') !!}
-                    {!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onfocusout'=>'getValue()']) !!}
                 </div>
             </div>
             <div class="col-md-2">
@@ -69,7 +113,7 @@
                     </button>
 
                     {!! Form::label('valor', 'Valor do Ativo:') !!}
-                    {!! Form::text('valor',  'não deve aparecer', ['class'=> 'form-control', 'disabled' => true]) !!}
+                    {!! Form::text('valor', 1, ['class'=> 'form-control']) !!}
                 </div>
             </div>
         </div>
@@ -92,7 +136,7 @@
                             ativo quanto à sua integridade.">i
                     </button>
                     {!! Form::label('integridade', 'Integridade:') !!}
-                    {!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onfocusout'=>'getValue()']) !!}
                 </div>
             </div>
 

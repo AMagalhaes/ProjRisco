@@ -34,7 +34,7 @@
                               disponivel quando necessário.">i
                     </button>
                     {!! Form::label('disponibilidade', 'Disponibilidade:') !!}
-                    {!! Form::select('disponibilidade', [1,2,3,4,5,6,7,8,9,10], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control']) !!}
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                             ativo quanto à sua confidencialidade.">i
                     </button>
                     {!! Form::label('confidencialidade', 'Confidencialidade:') !!}
-                    {!! Form::select('confidencialidade', [1,2,3,4,5,6,7,8,9,10], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-2">
@@ -67,8 +67,9 @@
                             data-content="Este campo apresenta o valor final que o ativo tem segundo as avaliações que introduziste
                             na confidencialidade, disponibilidade e integridade.">i
                     </button>
+
                     {!! Form::label('valor', 'Valor do Ativo:') !!}
-                    {!! Form::text('valor', null, ['class'=> 'form-control']) !!}
+                    {!! Form::text('valor',  'não deve aparecer', ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
             </div>
         </div>
@@ -91,7 +92,7 @@
                             ativo quanto à sua integridade.">i
                     </button>
                     {!! Form::label('integridade', 'Integridade:') !!}
-                    {!! Form::select('integridade', [1,2,3,4,5,6,7,8,9,10], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control']) !!}
                 </div>
             </div>
 

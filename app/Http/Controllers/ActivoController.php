@@ -54,7 +54,8 @@ class ActivoController extends Controller {
 	public function store(Requests\RegActivoRequest $request)
 	{
 		$activo = Activo::create(Input::all());
-
+		$activo->valor = (Input::get('disponibilidade')*0.6) + (Input::get('confidencialidade')*0.2) + (Input::get('integridade')*0.2) ;
+		$activo->save();
 		return redirect()->route('activo.index');
 	}
 
@@ -97,9 +98,10 @@ class ActivoController extends Controller {
 	{
 		$activo = Activo::find($id);
 		$activo->fill(Input::all());
+		$activo->calcValorAtivo();
 		$activo->save();
 
-		$activo->recalcImpotancia();
+
 
 		return redirect()->route('activo.index');
 	}

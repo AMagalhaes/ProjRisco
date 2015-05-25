@@ -25,6 +25,10 @@ Route::group(['middleware' => 'auth'], function () {
     // Analise
     Route::resource('activo.risco.tratamento', 'ActivoRiscoTratamentoController');
 
+    //Informações
+    Route::resource('infoInicio', 'infoController@index');
+
+
 });
 
 // Auth

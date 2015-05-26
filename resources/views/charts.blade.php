@@ -5,7 +5,41 @@
 <script src="{{ asset("scripts/chart.js") }}"></script>
 
 <div class="container">
-    <h1 class="text-center">Categorias de riscos</h1>
+    <h2 class="text-center">Categorias de riscos</h2>
+        <table>
+            <tr>
+                <td><h4><b>Níveis de risco</b></h4></td>
+            </tr>
+                <tr></tr>
+            <tr>
+                <td>Aceitável</td>
+                <td>-----</td>
+                <td>-------></td>
+                <td></td>
+                <td>0 - 50</td>
+            </tr>
+            <tr>
+                <td>Normal</td>
+                <td>-----</td>
+                <td>-------></td>
+                <td></td>
+                <td>51 - 1250</td>
+            </tr>
+            <tr>
+                <td>Alto</td>
+                <td>-----</td>
+                <td>-------></td>
+                <td></td>
+                <td>1251 - 2250</td>
+            </tr>
+            <tr>
+                <td>Crítico</td>
+                <td>-----</td>
+                <td>-------></td>
+                <td></td>
+                <td>2251 - 2500</td>
+            </tr>
+        </table>
     <div class="globalGraph">
     <div class="graphLabel"><h3>Nível de risco</h3></div>
     <div class="graph">
@@ -28,21 +62,6 @@
         <script src="{{ asset("scripts/charts_impl.js") }}"></script>
     <div class="refRisco"><h3>Referência do risco</h3></div>
     </div>
-        </div>
-    <h2><b>Níveis</b></h2>
-        <div class="teste">
-            <div>
-                <p>0 - 50 -------> Aceitável
-            </div>
-            <div>
-                <p>51 - 1250 -------> Normal
-            </div>
-            <div>
-                <p>1251 - 2250 -------> Alto
-            </div>
-            <div>
-                <p>2251 - 2500 -------> Crítico
-            </div>
         </div>
 </div>
 @endsection

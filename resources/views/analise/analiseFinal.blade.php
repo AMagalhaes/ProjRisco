@@ -53,8 +53,40 @@
                         <td>{!! 'A',$risco->activo_id,'R',$risco->id !!}</td>
                         <td>{!! $risco->ameaca !!}</td>
                         <td>{!! $risco->vulnerabilidade !!}</td>
-                        <td>{!! $risco->probabilidade !!}</td>
-                        <td>{!! $risco->impacto !!}</td>
+                        @if($risco->probabilidade == 1)
+                        <td>{!! 'Muito baixa' !!}</td>
+                        @endif
+                        @if($risco->probabilidade == 2)
+                        <td>{!! 'baixa' !!}</td>
+                        @endif
+                        @if($risco->probabilidade == 3)
+                        <td>{!! 'Normal' !!}</td>
+                        @endif
+                        @if($risco->probabilidade == 4)
+                        <td>{!! 'Alta' !!}</td>
+                        @endif
+                        @if($risco->probabilidade == 5)
+                        <td>{!! 'Muito Alta' !!}</td>
+                        @endif
+
+                        @if($risco->impacto == 1)
+                        <td>{!! 'Reduzido' !!}</td>
+                        @endif
+                        @if($risco->impacto == 2)
+                        <td>{!! 'Baixo' !!}</td>
+                        @endif
+                        @if($risco->impacto == 3)
+                        <td>{!! 'Medio' !!}</td>
+                        @endif
+                        @if($risco->impacto == 4)
+                        <td>{!! 'Alto' !!}</td>
+                        @endif
+                        @if($risco->impacto == 5)
+                        <td>{!! 'Muito Alta' !!}</td>
+                        @endif
+
+
+
                         <td>{!! $activo->valor !!}</td>
                         <td class="{{ $classe }}">{!! $risco->cat_risco !!}</td>
                         @if(($risco->cat_risco>=0) && ($risco->cat_risco<41))

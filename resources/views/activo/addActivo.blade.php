@@ -2,62 +2,29 @@
 
 @section('content')
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <script>
-//  function calculaValor() {
-//      var confidencialidade=document.getElementById('confidencialidade');
-//      var integridade=document.getElementById('confidencialidade');
-  //    var disponibilidade=document.getElementById('disponibilidade');
-//      alert('toninho'));
-//      return ((disponibilidade * 0.6) + (integridade * 0.2) + (confidencialidade*0.2))
-//  }
-
-
 function getValue()
   {
     var c=document.getElementById("confidencialidade");
     var d=document.getElementById("disponibilidade");
     var i=document.getElementById("integridade");
     var x =(c.value*0.6)+(d.value*0.2)+(i.value*0.2);
-    alert(x);
-  return(((c.value*0.6)+(d.value*0.2)+(i.value*0.2)));
+    document.getElementById("valor").value = parseInt(x);
   }
-
-
-  function actValor(){
-
-  }
-
-
-/*  $(document).ready(function(){
-    $("Input").focusin(function(){
-         $(this).css("background-color", "#FFFFCC");
-     });
-    $("Input").focusout(function(){
-        alert('toninho'));
-    });
-});
-*/
-
-
-
-
 </script>
 
 
 <div class="container">
-
     <h1 class="text-center">Registo de Ativos</h1>
-
     <p>Este formulário destina-se a regitar todos os ativos a considerar. Apenas os ativos que justifiquem
         importância no funcionamento de todos os processos em causa devem ser registados.</p>
-
     <div id="formAtivo">
         @if(Session::has('message'))
         <div class="alert alert-success">{{ Session::get('message') }}</div>
         @endif
-        {!! Form::open(['url'=>'activo']) !!}
+      <!--  {!! Form::open(['url'=>'activo']) !!} -->
+        {!! Form::open(['route'=> ['activo.store']]) !!}
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -65,8 +32,6 @@ function getValue()
                             data-content="Descreve da forma mais clara possível o nome do ativo a registar para que não
                             haja qualquer dúvida sobre o ativo a que se refere.">i
                     </button>
-                    <!-- Contextual button for informational alert messages -->
-                    <!-- <a class="btn btn-info btn-xs" href="{{ url('/info/nome-ativo') }}">i</a> -->
                     {!! Form::label('nome', 'Nome do Activo:') !!}
                     {!! Form::text('nome',null, ['class'=> 'form-control']) !!}
                 </div>
@@ -79,12 +44,11 @@ function getValue()
                               disponivel quando necessário.">i
                     </button>
                     {!! Form::label('disponibilidade', 'Disponibilidade:') !!}
-                    {!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onfocusout'=>'getValue()']) !!}
+                    {!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onchange'=>'getValue()']) !!}
                 </div>
             </div>
         </div>
         <div class="row">
-
             <div class="col-md-6">
                 <div class="form-group">
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Localização"
@@ -103,7 +67,7 @@ function getValue()
                             ativo quanto à sua confidencialidade.">i
                     </button>
                     {!! Form::label('confidencialidade', 'Confidencialidade:') !!}
-                    {!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onfocusout'=>'getValue()']) !!}
+                    {!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onchange'=>'getValue()']) !!}
                 </div>
             </div>
             <div class="col-md-2">
@@ -112,12 +76,10 @@ function getValue()
                             data-content="Este campo apresenta o valor final que o ativo tem segundo as avaliações que introduziste
                             na confidencialidade, disponibilidade e integridade.">i
                     </button>
-
                     {!! Form::label('valor', 'Valor do Ativo:') !!}
-                    {!! Form::text('valor', 1, ['class'=> 'form-control']) !!}
+                    {!! Form::text('valor', 1, ['class'=> 'form-control', 'disabled' =>true]) !!}
                 </div>
             </div>
-        </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -137,13 +99,11 @@ function getValue()
                             ativo quanto à sua integridade.">i
                     </button>
                     {!! Form::label('integridade', 'Integridade:') !!}
-                    {!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onfocusout'=>'getValue()']) !!}
+                    {!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onchange'=>'getValue()']) !!}
                 </div>
             </div>
-
-
+          </div>
         </div>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -156,21 +116,11 @@ function getValue()
                 </div>
             </div>
         </div>
-
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
         <input type="submit" class="btn btn-primary btn-block" value="Registar Ativo"/>
         {!! Form::close() !!}
     </div>
 </div>
-
-// Script que permite executar as janelas de informação
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('[data-toggle="popover"]').popover();
-    });
-</script>
-
-
 @if ($errors -> any())
 <script type='text/javascript'>alert('tem campos por preencher');</script>
 <ul>

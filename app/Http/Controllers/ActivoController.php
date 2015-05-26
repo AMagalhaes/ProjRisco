@@ -54,6 +54,7 @@ class ActivoController extends Controller {
 	public function store(Requests\RegActivoRequest $request)
 	{
 		$activo = Activo::create(Input::all());
+
 		$activo->valor = (Input::get('disponibilidade')*0.6) + (Input::get('confidencialidade')*0.2) + (Input::get('integridade')*0.2) ;
 		$activo->save();
 		return redirect()->route('activo.index');

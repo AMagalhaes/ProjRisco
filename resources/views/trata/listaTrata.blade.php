@@ -9,10 +9,9 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Descrição</th>
             <th>idRisco</th>
+            <th>Descrição</th>
             <th>Controlo</th>
-            <th>Beneficios</th>
             <th class="text-center">
                 Ações
             </th>
@@ -22,10 +21,9 @@
         <tbody>
         @foreach ($tratams as $trata)
         <tr>
+            <td>{{$trata->risco_id}}</td>
             <td>{{$trata->descricao}}</td>
-            <td>{{$trata->idRisco}}</td>
             <td>{{$trata->controlo}}</td>
-            <td>{{$trata->beneficios}}</td>
 
             <td class="text-center">
                 {!! Form::open(['route' => array('trata.destroy', $trata->id), 'method' => 'delete']) !!}

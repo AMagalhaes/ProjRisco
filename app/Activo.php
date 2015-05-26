@@ -9,10 +9,10 @@ class Activo extends Model
 
     protected $fillable = [
         'nome',
-        'valor',
         'disponibilidade',
         'integridade',
         'confidencialidade',
+        'valor',
         'obs',
         'localizacao',
         'tipo'

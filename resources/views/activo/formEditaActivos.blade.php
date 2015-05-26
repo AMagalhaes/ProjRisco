@@ -1,6 +1,19 @@
 @extends('app')
 
 @section('content')
+
+
+<script>
+function getValue()
+  {
+    var c=document.getElementById("confidencialidade");
+    var d=document.getElementById("disponibilidade");
+    var i=document.getElementById("integridade");
+    var x =(c.value*0.6)+(d.value*0.2)+(i.value*0.2);
+		document.getElementById("valor").value = x;
+  }
+</script>
+
 <div class="container">
 
 	<h1 class="text-center">Editar Ativo</h1>
@@ -35,7 +48,7 @@
                               disponivel quando necessário.">i
 					</button>
 					{!! Form::label('disponibilidade', 'Disponibilidade:') !!}
-					{!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->disponibilidade, ['class'=>'form-control']) !!}
+					{!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->disponibilidade, ['class'=>'form-control','onchange'=>'getValue()','onchange'=>'getValue()']) !!}
 				</div>
 			</div>
 		</div>
@@ -58,7 +71,7 @@
                             ativo quanto à sua confidencialidade.">i
 					</button>
 					{!! Form::label('confidencialidade', 'Confidencialidade:') !!}
-					{!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->confidencialidade, ['class'=>'form-control']) !!}
+					{!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->confidencialidade, ['class'=>'form-control','onchange'=>'getValue()']) !!}
 				</div>
 			</div>
 			<div class="col-md-2">
@@ -90,7 +103,7 @@
                             ativo quanto à sua integridade.">i
 					</button>
 					{!! Form::label('integridade', 'Integridade:') !!}
-					{!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->integridade , ['class'=>'form-control']) !!}
+					{!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], $activo->integridade , ['class'=>'form-control','onchange'=>'getValue()']) !!}
 				</div>
 			</div>
 		</div>

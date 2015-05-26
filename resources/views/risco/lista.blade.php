@@ -16,10 +16,9 @@
 		<thead>
 			<tr>
 				<th>Nome Activo</th>
-				<th>Vulnerabilidade</th>
 				<th>Ameaça</th>
-				<th class="text-center">Probabilidade</th>
-				<th class="text-center">Impacto</th>
+				<th >Probabilidade</th>
+				<th >Impacto</th>
 				<th class="text-center">
 					Ações
 				</th>
@@ -30,10 +29,39 @@
 			@foreach ($riscos as $risco)
 				<tr>
 					<td>{{$risco->activo->nome}}</td>
-					<td>{{$risco->vulnerabilidade}}</td>
 					<td>{{$risco->ameaca}}</td>
-					<td class="text-center">{{$risco->probabilidade}}</td>
-					<td class="text-center">{{$risco->impacto}}</td>
+					@if($risco->probabilidade == 1)
+					<td>{!! 'Muito Baixa' !!}</td>
+					@endif
+					@if($risco->probabilidade == 2)
+					<td>{!! 'Baixa' !!}</td>
+					@endif
+					@if($risco->probabilidade == 3)
+					<td>{!! 'Normal' !!}</td>
+					@endif
+					@if($risco->probabilidade == 4)
+					<td>{!! 'Alta' !!}</td>
+					@endif
+					@if($risco->probabilidade == 5)
+					<td>{!! 'Muito Alta' !!}</td>
+					@endif
+
+					@if($risco->impacto == 1)
+					<td>{!! 'Reduzido' !!}</td>
+					@endif
+					@if($risco->impacto == 2)
+					<td>{!! 'Baixo' !!}</td>
+					@endif
+					@if($risco->impacto == 3)
+					<td>{!! 'Medio' !!}</td>
+					@endif
+					@if($risco->impacto == 4)
+					<td>{!! 'Alto' !!}</td>
+					@endif
+					@if($risco->impacto == 5)
+					<td>{!! 'Muito Alta' !!}</td>
+					@endif
+
 						<td class="text-center">
 							{!! Form::open(array('route' => array('activo.risco.destroy', $risco->activo_id, $risco->id), 'method' => 'delete')) !!}
 								<!-- View Btn -->

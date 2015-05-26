@@ -10,7 +10,7 @@ function getValue()
     var d=document.getElementById("disponibilidade");
     var i=document.getElementById("integridade");
     var x =(c.value*0.6)+(d.value*0.2)+(i.value*0.2);
-		document.getElementById("valor").value = x;
+		document.getElementById("valor").value = parseInt(x);
   }
 </script>
 

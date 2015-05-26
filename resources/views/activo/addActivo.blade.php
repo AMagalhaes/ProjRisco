@@ -4,26 +4,27 @@
 
 
 <script>
-function getValue()
-  {
-    var c=document.getElementById("confidencialidade");
-    var d=document.getElementById("disponibilidade");
-    var i=document.getElementById("integridade");
-    var x =(c.value*0.6)+(d.value*0.2)+(i.value*0.2);
-    document.getElementById("valor").value = parseInt(x);
-  }
+    function getValue() {
+        var c = document.getElementById("confidencialidade");
+        var d = document.getElementById("disponibilidade");
+        var i = document.getElementById("integridade");
+        var x = (c.value * 0.6) + (d.value * 0.2) + (i.value * 0.2);
+        document.getElementById("valor").value = parseInt(x);
+    }
 </script>
 
 
 <div class="container">
     <h1 class="text-center">Registo de Ativos</h1>
+
     <p>Este formulário destina-se a regitar todos os ativos a considerar. Apenas os ativos que justifiquem
         importância no funcionamento de todos os processos em causa devem ser registados.</p>
+
     <div id="formAtivo">
         @if(Session::has('message'))
         <div class="alert alert-success">{{ Session::get('message') }}</div>
         @endif
-      <!--  {!! Form::open(['url'=>'activo']) !!} -->
+        <!--  {!! Form::open(['url'=>'activo']) !!} -->
         {!! Form::open(['route'=> ['activo.store']]) !!}
         <div class="row">
             <div class="col-md-6">
@@ -44,7 +45,9 @@ function getValue()
                               disponivel quando necessário.">i
                     </button>
                     {!! Form::label('disponibilidade', 'Disponibilidade:') !!}
-                    {!! Form::select('disponibilidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onchange'=>'getValue()']) !!}
+                    {!! Form::select('disponibilidade',
+                    [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null,
+                    ['class'=>'form-control','onchange'=>'getValue()']) !!}
                 </div>
             </div>
         </div>
@@ -67,7 +70,9 @@ function getValue()
                             ativo quanto à sua confidencialidade.">i
                     </button>
                     {!! Form::label('confidencialidade', 'Confidencialidade:') !!}
-                    {!! Form::select('confidencialidade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onchange'=>'getValue()']) !!}
+                    {!! Form::select('confidencialidade',
+                    [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null,
+                    ['class'=>'form-control','onchange'=>'getValue()']) !!}
                 </div>
             </div>
             <div class="col-md-2">
@@ -80,14 +85,17 @@ function getValue()
                     {!! Form::text('valor', 1, ['class'=> 'form-control', 'disabled' =>true]) !!}
                 </div>
             </div>
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Tipo de Ativo"
-                            data-content="Indica qual o tipo de ativo que pertence o mesmo segundo as opções apresentadas.">i
+                            data-content="Indica qual o tipo de ativo que pertence o mesmo segundo as opções apresentadas.">
+                        i
                     </button>
                     {!! Form::label('tipo', 'Tipo Ativo:') !!}
-                    {!! Form::select('tipo', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano',
+                    {!! Form::select('tipo', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' =>
+                    'Humano',
                     'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], null, ['class'=> 'form-control']) !!}
                 </div>
             </div>
@@ -99,27 +107,29 @@ function getValue()
                             ativo quanto à sua integridade.">i
                     </button>
                     {!! Form::label('integridade', 'Integridade:') !!}
-                    {!! Form::select('integridade', [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null, ['class'=>'form-control','onchange'=>'getValue()']) !!}
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Observações"
-                            data-content="Este campo tem como propósito o registo de eventuais observações pertinentes na
-                            ajuda e esclarecimento de informação adicional relevante.">i
-                    </button>
-                    {!! Form::label('obs', 'Observação:') !!}
-                    {!! Form::textarea('obs',null, ['class'=> 'form-control']) !!}
+                    {!! Form::select('integridade',
+                    [1=>'1',2=>'2',3=>'3',4=>'4',5=>'5',6=>'6',7=>'7',8=>'8',9=>'9',10=>'10'], null,
+                    ['class'=>'form-control','onchange'=>'getValue()']) !!}
                 </div>
             </div>
         </div>
-        <input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
-        <input type="submit" class="btn btn-primary btn-block" value="Registar Ativo"/>
-        {!! Form::close() !!}
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Observações"
+                        data-content="Este campo tem como propósito o registo de eventuais observações pertinentes na
+                            ajuda e esclarecimento de informação adicional relevante.">i
+                </button>
+                {!! Form::label('obs', 'Observação:') !!}
+                {!! Form::textarea('obs',null, ['class'=> 'form-control']) !!}
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="_token" value="{{{ csrf_token() }}}"/>
+    <input type="submit" class="btn btn-primary btn-block" value="Registar Ativo"/>
+    {!! Form::close() !!}
+</div>
 </div>
 @if ($errors -> any())
 <script type='text/javascript'>alert('tem campos por preencher');</script>
@@ -131,4 +141,11 @@ function getValue()
     @endforeach
 </ul>
 @endif
+
+// Script que permite executar as janelas de informação
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
 @endsection

@@ -7598,6 +7598,7 @@ h1 {
 
 h2, h3 {
     color: #FFFFFF;
+    margin-top: 0px;
 }
 
 .form-group p {

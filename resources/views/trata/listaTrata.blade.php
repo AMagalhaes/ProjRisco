@@ -9,19 +9,18 @@
     <table class="table">
         <thead>
         <tr>
-            <th>idRisco</th>
-            <th>Descrição</th>
-            <th>Controlo</th>
-            <th class="text-center">
+            <th class="col-lg-1, text-center">Ref.Risco</th>
+            <th class="col-lg-4">Descrição</th>
+            <th class="col-lg-4">Controlo</th>
+            <th class="col-lg-3, text-center">
                 Ações
             </th>
         </tr>
         </thead>
-
         <tbody>
         @foreach ($tratams as $trata)
         <tr>
-            <td>{{$trata->risco_id}}</td>
+            <td class="text-center">{{$trata->risco_id}}</td>
             <td>{{$trata->descricao}}</td>
             <td>{{$trata->controlo}}</td>
 

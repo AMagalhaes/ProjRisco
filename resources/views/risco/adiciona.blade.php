@@ -39,7 +39,8 @@
                 <div class="form-group">
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
                             data-content="Este campo destina-se a descrever potenciais ameaças para o ativo em função da vulnerabilidade descrita neste formulário
-                            e que poderá prejudicar o normal funcionamento das suas funções (ativo). ex: Inundação, fogo, explosão, intoxicação alimentar...">i
+                            e que poderá prejudicar o normal funcionamento das suas funções (ativo). ex: Inundação, fogo, explosão, intoxicação alimentar...">
+                        i
                     </button>
                     {!! Form::label('ameaca', 'Ameaça:') !!}
                     {!! Form::textarea('ameaca',null, ['class'=> 'form-control']) !!}
@@ -56,10 +57,12 @@
                 </div>
                 <div class="form-group">
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Nome Ativo"
-                            data-content="Indica a probabilidade de acontecer a situação registada neste formulário e que considera ajustada.">i
+                            data-content="Indica a probabilidade de acontecer a situação registada neste formulário e que considera ajustada.">
+                        i
                     </button>
                     {!! Form::label('probabilidade', 'Probabilidade:') !!}
-                    {!! Form::select('probabilidade',['', 'Muito Baixa','Baixa','Normal','Alta', 'Muito Alta'], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('probabilidade',['', 'Muito Baixa','Baixa','Normal','Alta', 'Muito Alta'], null,
+                    ['class'=>'form-control']) !!}
                 </div>
 
                 <div class="form-group">
@@ -68,7 +71,8 @@
                             todos os processos, caso aconteça a situação registada neste formulário.">i
                     </button>
                     {!! Form::label('impacto', 'Impacto:') !!}
-                    {!! Form::select('impacto',['', 'Reduzido','Baixo','Médio','Alto', 'Elevado'], null, ['class'=>'form-control']) !!}
+                    {!! Form::select('impacto',['', 'Reduzido','Baixo','Médio','Alto', 'Elevado'], null,
+                    ['class'=>'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-4">
@@ -95,12 +99,13 @@
 
     @if ($errors -> any())
     <script type='text/javascript'>alert('tem campos por preencher');</script>
-    	<ul>
-    			@foreach($errors->all() as $error)
-    			  <?php	$myArray = explode(' ', $error); ?>
-    		 		<li style="color:red"><font size='3'>Tem de preencher o campo</font> <font size='5'><strong>{{$myArray[1]}}</strong></font></li>
-    			@endforeach
-    				</ul>
+    <ul>
+        @foreach($errors->all() as $error)
+        <?php $myArray = explode(' ', $error); ?>
+        <li style="color:red"><font size='3'>Tem de preencher o campo</font> <font
+                size='5'><strong>{{$myArray[1]}}</strong></font></li>
+        @endforeach
+    </ul>
     @endif
 
     // Script que permite executar as janelas de informação

@@ -56,7 +56,7 @@
         </div>
 
         <div class="container">
-        	<h1> Riscos deste Activo</h1>
+        	<h2> Riscos deste Activo</h2>
         	<hr/>
 
         <div class="container">

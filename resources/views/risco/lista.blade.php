@@ -15,11 +15,12 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Nome Activo</th>
-				<th>Ameaça</th>
-				<th >Probabilidade</th>
-				<th >Impacto</th>
-				<th class="text-center">
+				<th class="col-md-1, text-center">Ref.Risco</th>
+				<th class="col-md-2">Nome Activo</th>
+				<th class="col-md-3">Ameaça</th>
+				<th class="col-md-1, text-center">Probabilidade</th>
+				<th class="col-md-1, text-center">Impacto</th>
+				<th class="col-md-4, text-center">
 					Ações
 				</th>
 			</tr>
@@ -28,38 +29,39 @@
 		<tbody>
 			@foreach ($riscos as $risco)
 				<tr>
+					<td class="text-center">{{$risco->id}}</td>
 					<td>{{$risco->activo->nome}}</td>
 					<td>{{$risco->ameaca}}</td>
 					@if($risco->probabilidade == 1)
-					<td>{!! 'Muito Baixa' !!}</td>
+					<td class="text-center">{!! 'Muito Baixa' !!}</td>
 					@endif
 					@if($risco->probabilidade == 2)
-					<td>{!! 'Baixa' !!}</td>
+					<td class="text-center">{!! 'Baixa' !!}</td>
 					@endif
 					@if($risco->probabilidade == 3)
-					<td>{!! 'Normal' !!}</td>
+					<td class="text-center">{!! 'Normal' !!}</td>
 					@endif
 					@if($risco->probabilidade == 4)
-					<td>{!! 'Alta' !!}</td>
+					<td class="text-center">{!! 'Alta' !!}</td>
 					@endif
 					@if($risco->probabilidade == 5)
-					<td>{!! 'Muito Alta' !!}</td>
+					<td class="text-center">{!! 'Muito Alta' !!}</td>
 					@endif
 
 					@if($risco->impacto == 1)
-					<td>{!! 'Reduzido' !!}</td>
+					<td class="text-center">{!! 'Reduzido' !!}</td>
 					@endif
 					@if($risco->impacto == 2)
-					<td>{!! 'Baixo' !!}</td>
+					<td class="text-center">{!! 'Baixo' !!}</td>
 					@endif
 					@if($risco->impacto == 3)
-					<td>{!! 'Medio' !!}</td>
+					<td class="text-center">{!! 'Medio' !!}</td>
 					@endif
 					@if($risco->impacto == 4)
-					<td>{!! 'Alto' !!}</td>
+					<td class="text-center">{!! 'Alto' !!}</td>
 					@endif
 					@if($risco->impacto == 5)
-					<td>{!! 'Muito Alta' !!}</td>
+					<td class="text-center">{!! 'Muito Alta' !!}</td>
 					@endif
 
 						<td class="text-center">

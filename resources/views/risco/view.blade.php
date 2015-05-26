@@ -59,7 +59,7 @@
         </div>
 
         <div class="container">
-          <h1> Controlos</h1>
+          <h2> Controlos deste risco</h2>
           <hr/>
 
         <div class="container">

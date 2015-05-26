@@ -11,12 +11,11 @@
 
             <tr>
                 <th class="col-md-3">Nome do Ativo</th>
-                <th class="col-md-1">IdRisco</th>
-                <th class="col-md-2">Vulnerabilidade</th>
-                <th class="col-md-2">Ameaça</th>
-                <th class="col-md-1">Probabilidade</th>
-                <th class="col-md-1">Impacto</th>
-                <th class="col-md-1">Val.Activo</th>
+                <th class="col-md-1, text-center">Ref.Risco</th>
+                <th class="col-md-3">Ameaça</th>
+                <th class="col-md-1, text-center">Probabilidade</th>
+                <th class="col-md-1, text-center">Impacto</th>
+                <th class="col-md-1, text-center">Val.Activo</th>
                 <th class="col-md-1">Nvl.Risco</th>
                 <th class="col-md-1">Categoria</th>
                 <th class="col-md-1">Aceitavel</th>
@@ -50,44 +49,43 @@
 
                     <tr>
                         <td>{!! '------' !!}</td>
-                        <td>{!! 'A',$risco->activo_id,'R',$risco->id !!}</td>
+                        <td class="text-center">{!! 'A',$risco->activo_id,'R',$risco->id !!}</td>
                         <td>{!! $risco->ameaca !!}</td>
-                        <td>{!! $risco->vulnerabilidade !!}</td>
                         @if($risco->probabilidade == 1)
-                        <td>{!! 'Muito baixa' !!}</td>
+                        <td class="text-center">{!! 'Muito baixa' !!}</td>
                         @endif
                         @if($risco->probabilidade == 2)
-                        <td>{!! 'baixa' !!}</td>
+                        <td class="text-center">{!! 'baixa' !!}</td>
                         @endif
                         @if($risco->probabilidade == 3)
-                        <td>{!! 'Normal' !!}</td>
+                        <td class="text-center">{!! 'Normal' !!}</td>
                         @endif
                         @if($risco->probabilidade == 4)
-                        <td>{!! 'Alta' !!}</td>
+                        <td class="text-center">{!! 'Alta' !!}</td>
                         @endif
                         @if($risco->probabilidade == 5)
-                        <td>{!! 'Muito Alta' !!}</td>
+                        <td class="text-center">{!! 'Muito Alta' !!}</td>
                         @endif
 
                         @if($risco->impacto == 1)
-                        <td>{!! 'Reduzido' !!}</td>
+                        <td class="text-center">{!! 'Reduzido' !!}</td>
                         @endif
                         @if($risco->impacto == 2)
-                        <td>{!! 'Baixo' !!}</td>
+                        <td class="text-center">{!! 'Baixo' !!}</td>
                         @endif
                         @if($risco->impacto == 3)
-                        <td>{!! 'Medio' !!}</td>
+                        <td class="text-center">{!! 'Medio' !!}</td>
                         @endif
                         @if($risco->impacto == 4)
-                        <td>{!! 'Alto' !!}</td>
+                        <td class="text-center">{!! 'Alto' !!}</td>
                         @endif
                         @if($risco->impacto == 5)
-                        <td>{!! 'Muito Alta' !!}</td>
+                        <td class="text-center">{!! 'Muito Alta' !!}</td>
                         @endif
 
 
 
-                        <td>{!! $activo->valor !!}</td>
+                        <td class="text-center">{!! $activo->valor !!}</td>
                         <td class="{{ $classe }}">{!! $risco->cat_risco !!}</td>
                         @if(($risco->cat_risco>=0) && ($risco->cat_risco<41))
                           <td  class="{{ $classe }}">{!! 'Aceitavel' !!}</td>

@@ -32,11 +32,12 @@
 	<table class="table table-condensed">
 		<thead>
 			<tr>
+				<th class="col-md-1, text-center">Ref.Ativo</th>
 				<th class="col-md-3">Nome do Ativo</th>
-				<th class="col-md-2">Localização do Ativo</th>
-				<th class="col-md-1">Tipo de Ativo</th>
-				<th class="col-md-1, text-center">Val. do Ativo</th>
-				<th class="text-center">
+				<th class="col-md-3">Localização</th>
+				<th class="col-md-1, text-center">Tipo</th>
+				<th class="col-md-1, text-center">Valor</th>
+				<th class="col-lg-1, text-center">
 					Ações
 				</th>
 			</tr>
@@ -45,9 +46,10 @@
 		<tbody>
 			@foreach ($activos as $activo)
 			<tr>
+				<td class="text-center">{{$activo->id}}</td>
 				<td>{{$activo->nome}}</td>
 				<td>{{$activo->localizacao}}</td>
-				<td>{{$activo->tipo}}</td>
+				<td class="text-center">{{$activo->tipo}}</td>
 				<td class="text-center">{{$activo->valor}}</td>
 					<td class="text-center">
 						{!! Form::open(['route' => array('activo.destroy', $activo->id), 'method' => 'delete']) !!}

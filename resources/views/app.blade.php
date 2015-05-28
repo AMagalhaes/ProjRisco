@@ -8,7 +8,6 @@
 
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('/imgs/logoPorto.png') }}">
-    <script src="Chart.js"></script>
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>

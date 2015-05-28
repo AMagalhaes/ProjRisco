@@ -20,8 +20,8 @@
 				<div class="form-group">
 					<!-- Contextual button for informational alert messages -->
 					<button type="button" class="btn btn-xs" onclick="alert('Este campo identifica o nome do ativo para o qual vai registar um risco.')">i</button>
-					{!! Form::label('activo_id', 'Id do Activo:') !!}
-					{!! Form::text('activo_id',$risco->activo_id, ['class'=> 'form-control', 'disabled' => true]) !!}
+					{!! Form::label('activo_id', 'Nome do Activo:') !!}
+					{!! Form::text('activo_id',$risco -> activo -> nome, ['class'=> 'form-control', 'disabled' => true]) !!}
 				</div>
 			</div>
 		</div>
@@ -52,22 +52,22 @@
 					<!-- Contextual button for informational alert messages -->
 					<button type="button" class="btn btn-xs" onclick="alert('Indica a probabilidade de acontecer a situação registada neste formulário e que considera ajustada.')">i</button>
 					{!! Form::label('probabilidade', 'Probabilidade:') !!}
-					{!! Form::select('probabilidade',['', 'Muito Alta','Alta','Normal','Baixa', 'Muito Baixa'], $risco->probabilidade, ['class'=>'form-control']) !!}
+					{!! Form::select('probabilidade',['1' => 'Muito Baixa', '2' => 'Baixa', '3' => 'Normal', '4' => 'Alta', '5' => 'Muito Alta'], $risco->probabilidade, ['class'=>'form-control']) !!}
 				</div>
 
 				<div class="form-group">
 					<!-- Contextual button for informational alert messages -->
 					<button type="button" class="btn btn-xs" onclick="alert('Indica a dimensão do impacto que considera ajustado e que poderá ter a estrutura e o normal funcionamento de todos os processos, caso aconteça a situação registada neste formulário.')">i</button>
 					{!! Form::label('impacto', 'Impacto:') !!}
-					{!! Form::select('impacto',['', 'Elevado','Alto','Médio','Baixo', 'Reduzido'], $risco->impacto, ['class'=>'form-control']) !!}
+					{!! Form::select('impacto',['1' => 'Reduzido', '2' => 'Baixo', '3' => 'Médio', '4' => 'Alto', '5' => 'Elevado'], $risco->impacto, ['class'=>'form-control']) !!}
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
 					<!-- Contextual button for informational alert messages -->
 					<button type="button" class="btn btn-xs" onclick="alert('Este campo destina-se a que sejam registadas eventuais observações pertinentes na ajuda e esclarecimento de informação adicional relevante.')">i</button>
-					{!! Form::label('obsFinalR', 'Obervações:') !!}
-					{!! Form::textarea('obsFinalR',null, ['class'=> 'form-control']) !!}
+					{!! Form::label('obs_final', 'Observações:') !!}
+					{!! Form::textarea('obs_final', $risco -> obs_final, ['class'=> 'form-control']) !!}
 				</div>
 			</div>
 		</div>
@@ -82,4 +82,3 @@
 		{!! Form::close() !!}
 	</div>
 	@endsection
-

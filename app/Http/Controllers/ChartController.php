@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Risco;
+use App\Activo;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class ChartController extends Controller {
 	public function index()
 	{
 		$riscos = Risco::all();
-		return view('charts', compact('riscos'));
+		$activos = Activo::all();
+		return view('charts', compact('riscos', 'activos'));
 	}
 
 	/**

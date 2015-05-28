@@ -32,7 +32,7 @@ class Activo extends Model
 
     public function calcValorAtivo()
     {
-        $this->valor = ($this->disponibilidade * 0.6) + ($this->integridade * 0.2) + ($this->confidencialidade * 0.2);
+        $this->valor = ($this->disponibilidade * 0.4) + ($this->integridade * 0.2) + ($this->confidencialidade * 0.4);
         return $this->valor;
     }
     public function verificaRisco($id)

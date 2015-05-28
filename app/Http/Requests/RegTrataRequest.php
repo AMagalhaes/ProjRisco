@@ -11,6 +11,11 @@ class RegTrataRequest extends Request {
 	 */
 	public function authorize()
 	{
+		$user = Auth::user();
+
+		if ($user->type === 'normal') {
+			return false;
+		}
 		return true;
 	}
 

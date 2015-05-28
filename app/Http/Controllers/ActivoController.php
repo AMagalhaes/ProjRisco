@@ -19,13 +19,21 @@ class ActivoController extends Controller {
 	public function index()
 	{
 		$activos = Activo::orderBy('id');
+		
+		$hasLocalizacaoFilter = Input::has('localizacaoFilter');
+		$valueLocalizacaoFilter = Input::get('localizacaoFilter');
+		$emptyLocalizacaoFilter = empty($valueLocalizacaoFilter);
 
-		if (Input::has('localizacaoFilter') && !empty(Input::get('localizacaoFilter'))) {
+		if ($hasLocalizacaoFilter && !$emptyLocalizacaoFilter) {
 
 			$activos->where('localizacao', Input::get('localizacaoFilter'));
 		}
 
-		if (Input::has('tipoFilter') && !empty(Input::get('tipoFilter'))) {
+		$hasTipoFilter = Input::has('tipoFilter');
+		$valueTipoFilter = Input::get('tipoFilter');
+		$emptyTipoFilter = empty($valueTipoFilter);
+		
+		if ($hasTipoFilter && !$emptyTipoFilter) {
 
 			$activos->where('tipo', Input::get('tipoFilter'));
 		}

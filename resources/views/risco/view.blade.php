@@ -18,8 +18,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    {!! Form::label('activo_id', 'Id do Activo:') !!}
-                    {!! Form::text('activo_id',$risco->activo_id, ['class'=> 'form-control', 'disabled' => true]) !!}
+                    {!! Form::label('activo_id', 'Nome do Activo:') !!}
+                    {!! Form::text('activo_id',$risco -> activo -> nome, ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     {!! Form::label('obsFinalR', 'Obervações:') !!}
-                    {!! Form::textarea('obsFinalR',null, ['class'=> 'form-control', 'disabled' => true]) !!}
+                    {!! Form::textarea('obsFinalR', $risco -> obs_final, ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
             </div>
         </div>

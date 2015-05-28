@@ -4,4 +4,10 @@ window.onload = function () {
         responsive: true,
         datasetFill: true
     });
+    
+    var sdCanvasChart = document.getElementById("myChart2").getContext("2d");
+    new Chart(sdCanvasChart).Bar(barChartData2, {
+        responsive: true,
+        datasetFill: true
+    });
 }

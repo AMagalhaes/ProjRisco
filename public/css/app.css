@@ -7646,7 +7646,6 @@ h2, h3 {
 }
 
 .graph {
-
     margin: 0 auto;
     width: 90%;
     height: 200px;
@@ -7684,14 +7683,32 @@ ul {
     text-align: center;
 }
 
-.niveis{
+.niveis {
     text-align: left;
     width: 160px;
     background-color: #164EA1;
     margin-bottom: 0px;
 }
 
-.niveis p{
+.niveis p {
     color: #00FF00;
     margin-bottom: 0px;
+}
+
+/* */
+
+.labelGraph {
+    display: block;
+    position: relative;
+    margin-right: -50px;
+}
+
+.labelGraph h3 {
+    text-align: center;
+    -webkit-transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    width: 150px;
+    line-height: 0px;
+    height: 179px;
+    margin-top: 100px;
 }

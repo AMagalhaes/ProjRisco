@@ -61,7 +61,7 @@
                         i
                     </button>
                     {!! Form::label('probabilidade', 'Probabilidade:') !!}
-                    {!! Form::select('probabilidade',['', 'Muito Baixa','Baixa','Normal','Alta', 'Muito Alta'], null,
+                    {!! Form::select('probabilidade',['1' => 'Muito Baixa', '2' => 'Baixa', '3' => 'Normal', '4' => 'Alta', '5' => 'Muito Alta'], null,
                     ['class'=>'form-control']) !!}
                 </div>
 
@@ -71,7 +71,7 @@
                             todos os processos, caso aconteça a situação registada neste formulário.">i
                     </button>
                     {!! Form::label('impacto', 'Impacto:') !!}
-                    {!! Form::select('impacto',['', 'Reduzido','Baixo','Médio','Alto', 'Elevado'], null,
+                    {!! Form::select('impacto',['1' => 'Reduzido', '2' => 'Baixo', '3' => 'Médio', '4' => 'Alto', '5' => 'Elevado'], null,
                     ['class'=>'form-control']) !!}
                 </div>
             </div>
@@ -81,8 +81,8 @@
                             data-content="Este campo destina-se a que sejam registadas eventuais observações pertinentes na ajuda e esclarecimento de informação
                             adicional relevante.">i
                     </button>
-                    {!! Form::label('obsFinalR', 'Observações:') !!}
-                    {!! Form::textarea('obsFinalR',null, ['class'=> 'form-control']) !!}
+                    {!! Form::label('obs_final', 'Observações:') !!}
+                    {!! Form::textarea('obs_final',null, ['class'=> 'form-control']) !!}
                 </div>
             </div>
         </div>

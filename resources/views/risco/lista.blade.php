@@ -16,8 +16,8 @@
 		<thead>
 			<tr>
 				<th class="col-md-1, text-center">Ref.Risco</th>
-				<th class="col-md-1">Nome Activo</th>
-				<th class="col-md-1">Ameaça</th>
+				<th class="col-md-2">Nome Activo</th>
+				<th class="col-md-3">Ameaça</th>
 				<th class="col-md-1, text-center">Probabilidade</th>
 				<th class="col-md-2, text-center">Impacto</th>
 				<th class="col-md-2, text-center">

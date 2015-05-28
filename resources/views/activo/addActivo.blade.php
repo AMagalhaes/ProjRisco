@@ -8,7 +8,7 @@
         var c = document.getElementById("confidencialidade");
         var d = document.getElementById("disponibilidade");
         var i = document.getElementById("integridade");
-        var x = (c.value * 0.6) + (d.value * 0.2) + (i.value * 0.2);
+        var x = (c.value * 0.4) + (d.value * 0.4) + (i.value * 0.2);
         document.getElementById("valor").value = parseInt(x);
     }
 </script>
@@ -58,8 +58,28 @@
                             data-content="Indica a que departamento ou localização física pertence este ativo.">i
                     </button>
                     {!! Form::label('localizacao', 'Localização:') !!}
-                    {!! Form::select('localizacao',['DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas',
-                    'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], null, ['class'=> 'form-control']) !!}
+                    {!! Form::select('localizacao',[
+                    'DMGE' => 'DMGE',
+                    'DMSI' => 'DMSI',
+                    'Escolas' => 'Escolas',
+                    'Alexandre Herculano' => 'Alexandre Herculano',
+                    'António Nobre' => 'António Nobre',
+                    'Aurélia de Sousa' => 'Aurélia de Sousa',
+                    'Carolina Michaelis' => 'Carolina Michaelis',
+                    'Clara de Resende' => 'Clara de Resende',
+                    'Cerco' => 'Cerco',
+                    'Eugénio de Andrade' => 'Eugénio de Andrade',
+                    'Fontes Pereira de Melo' => 'Fontes Pereira de Melo',
+                    'Garcia de Orta' => 'Garcia de Orta',
+                    'Infante D. Henrique' => 'Infante D. Henrique',
+                    'Leonardo Coimbra Filho' => 'Leonardo Coimbra Filho',
+                    'Manoel de Oliveira' => 'Manoel de Oliveira',
+                    'Pêro Vaz de Caminha' => 'Pêro Vaz de Caminha',
+                    'Rodrigues de Freitas' => 'Rodrigues de Freitas',
+                    'Viso' => 'Viso',
+                    'Outro' => 'Outro'],
+
+                    null, ['class'=> 'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-2">
@@ -90,13 +110,19 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Tipo de Ativo"
-                            data-content="Indica qual o tipo de ativo que pertence o mesmo segundo as opções apresentadas.">
-                        i
+                            data-content="Indica qual o tipo de ativo que pertence o mesmo segundo as opções apresentadas.">i
                     </button>
                     {!! Form::label('tipo', 'Tipo Ativo:') !!}
-                    {!! Form::select('tipo', ['Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' =>
-                    'Humano',
-                    'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], null, ['class'=> 'form-control']) !!}
+                    {!! Form::select('tipo', [
+                    'Cozinha' => 'Cozinha',
+                    'Refeitório' => 'Refeitório',
+                    'Escola' => 'Escola',
+                    'Hardware' => 'Hardware',
+                    'Software' => 'Software',
+                    'Humano' => 'Humano',
+                    'Outros' => 'Outros'],
+
+                    null, ['class'=> 'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-2">

@@ -63,7 +63,7 @@ class ActivoController extends Controller {
 	{
 		$activo = Activo::create(Input::all());
 
-		$activo->valor = (Input::get('disponibilidade')*0.6) + (Input::get('confidencialidade')*0.2) + (Input::get('integridade')*0.2) ;
+		$activo->valor = (Input::get('disponibilidade')*0.4) + (Input::get('confidencialidade')*0.4) + (Input::get('integridade')*0.2) ;
 		$activo->save();
 		return redirect()->route('activo.index');
 	}
@@ -112,7 +112,7 @@ class ActivoController extends Controller {
 
 
 
-		return redirect()->route('activo.index');
+		return redirect()->route('activo.show', [$id]);
 	}
 
 	/**

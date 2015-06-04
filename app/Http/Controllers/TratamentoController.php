@@ -84,7 +84,7 @@ class TratamentoController extends Controller {
 		$trata->fill(Input::all());
 		$trata->save();
 
-		return redirect()->route('trata.index');
+		return redirect()->route('trata.show', [$id]);
 	}
 
 	/**

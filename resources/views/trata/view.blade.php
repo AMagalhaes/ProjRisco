@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    {!! Form::label('idTrata', 'Id do Activo:') !!}
+                    {!! Form::label('idTrata', 'Id do Ativo:') !!}
                     {!! Form::text('idTrata',$trata->id, ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
             </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-	<h1> Activos</h1>
+	<h1> Ativos</h1>
 	<hr/>
 </div>
 
@@ -17,10 +17,27 @@
     <div>
         <div class="form-group">
             {!! Form::label('localizacao', 'Localização:') !!}
-			{!! Form::select('localizacaoFilter',['Todos', 'DME' => 'DME', 'DMSI' => 'DMSI', 'Escolas' => 'Escolas', 'Refeitório' => 'Refeitório', 'Cozinha' => 'Cozinha'], ['class'=> 'form-control']) !!}
+			{!! Form::select('localizacaoFilter',[
+				'Todos',
+				'DMGE' => 'DMGE',
+				'DMSI' => 'DMSI',
+				'Escolas' => 'Escolas',
+				'Outro' => 'Outro'
+                    
+			], ['class'=> 'form-control']) !!}
 
             {!! Form::label('tipo', 'Tipo:') !!}
-			{!! Form::select('tipoFilter',['Todos', 'Hardware' => 'Hardware', 'Software' => 'Software', 'Humano' => 'Humano', 'Utensílios' => 'Utensílios', 'Outros' => 'Outros'], ['class'=> 'form-control']) !!}
+			{!! Form::select('tipoFilter',[
+				'Todos',
+				'Cozinha' => 'Cozinha',
+				'Refeitório' => 'Refeitório',
+				'Escola' => 'Escola',
+				'Hardware' => 'Hardware',
+				'Software' => 'Software',
+				'Humano' => 'Humano',
+				'Outros' => 'Outros'
+			
+			], ['class'=> 'form-control']) !!}
 
             <button class="btn btn-primary btn-small" type="submit">Filtrar</button>
         </div>

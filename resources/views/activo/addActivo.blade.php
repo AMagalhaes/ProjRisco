@@ -33,7 +33,7 @@
                             data-content="Descreve da forma mais clara possível o nome do ativo a registar para que não
                             haja qualquer dúvida sobre o ativo a que se refere.">i
                     </button>
-                    {!! Form::label('nome', 'Nome do Activo:') !!}
+                    {!! Form::label('nome', 'Nome do Ativo:') !!}
                     {!! Form::text('nome',null, ['class'=> 'form-control']) !!}
                 </div>
             </div>
@@ -62,21 +62,6 @@
                     'DMGE' => 'DMGE',
                     'DMSI' => 'DMSI',
                     'Escolas' => 'Escolas',
-                    'Alexandre Herculano' => 'Alexandre Herculano',
-                    'António Nobre' => 'António Nobre',
-                    'Aurélia de Sousa' => 'Aurélia de Sousa',
-                    'Carolina Michaelis' => 'Carolina Michaelis',
-                    'Clara de Resende' => 'Clara de Resende',
-                    'Cerco' => 'Cerco',
-                    'Eugénio de Andrade' => 'Eugénio de Andrade',
-                    'Fontes Pereira de Melo' => 'Fontes Pereira de Melo',
-                    'Garcia de Orta' => 'Garcia de Orta',
-                    'Infante D. Henrique' => 'Infante D. Henrique',
-                    'Leonardo Coimbra Filho' => 'Leonardo Coimbra Filho',
-                    'Manoel de Oliveira' => 'Manoel de Oliveira',
-                    'Pêro Vaz de Caminha' => 'Pêro Vaz de Caminha',
-                    'Rodrigues de Freitas' => 'Rodrigues de Freitas',
-                    'Viso' => 'Viso',
                     'Outro' => 'Outro'],
 
                     null, ['class'=> 'form-control']) !!}

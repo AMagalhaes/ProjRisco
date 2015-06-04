@@ -70,9 +70,12 @@
                             data-content="Indica a dimensão do impacto que considera ajustado e que poderá ter a estrutura e o normal funcionamento de
                             todos os processos, caso aconteça a situação registada neste formulário.">i
                     </button>
+                    
                     {!! Form::label('impacto', 'Impacto:') !!}
-                    {!! Form::select('impacto',['1' => 'Reduzido', '2' => 'Baixo', '3' => 'Médio', '4' => 'Alto', '5' => 'Elevado'], null,
-                    ['class'=>'form-control']) !!}
+                    {!! Form::select('impacto', [
+                                                 '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5',
+                                                 '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10'
+                                                 ], null, ['class'=>'form-control']) !!}
                 </div>
             </div>
             <div class="col-md-4">

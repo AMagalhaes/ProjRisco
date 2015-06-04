@@ -48,6 +48,7 @@ class ActivoRiscoController extends Controller {
 		$risco->recalcImpotancia();
 
 		return redirect()->route('risco.index');
+		//return view('activo.view','$idActivo');
 	}
 
 	/**
@@ -89,7 +90,7 @@ class ActivoRiscoController extends Controller {
 		// recalcula a importancia do activo
 		$risco->recalcImpotancia();
 
-		return redirect()->route('risco.index');
+		return redirect()->route('risco.show', [$id]);
 	}
 
 	/**

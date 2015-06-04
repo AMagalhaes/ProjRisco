@@ -26,7 +26,7 @@ function getValue()
 					<button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Referência do Ativo"
 							data-content="Este campo contém a referência associada a este ativo.">i
 					</button>
-					{!! Form::label('idActivo', 'Id do Activo:') !!}
+					{!! Form::label('idActivo', 'Id do Ativo:') !!}
 					{!! Form::text('idActivo',$activo->id, ['class'=> 'form-control', 'disabled' => true]) !!}
 				</div>
 			</div>
@@ -64,21 +64,6 @@ function getValue()
 						'DMGE' => 'DMGE',
 						'DMSI' => 'DMSI',
 						'Escolas' => 'Escolas',
-						'Alexandre Herculano' => 'Alexandre Herculano',
-						'António Nobre' => 'António Nobre',
-						'Aurélia de Sousa' => 'Aurélia de Sousa',
-						'Carolina Michaelis' => 'Carolina Michaelis',
-						'Clara de Resende' => 'Clara de Resende',
-						'Cerco' => 'Cerco',
-						'Eugénio de Andrade' => 'Eugénio de Andrade',
-						'Fontes Pereira de Melo' => 'Fontes Pereira de Melo',
-						'Garcia de Orta' => 'Garcia de Orta',
-						'Infante D. Henrique' => 'Infante D. Henrique',
-						'Leonardo Coimbra Filho' => 'Leonardo Coimbra Filho',
-						'Manoel de Oliveira' => 'Manoel de Oliveira',
-						'Pêro Vaz de Caminha' => 'Pêro Vaz de Caminha',
-						'Rodrigues de Freitas' => 'Rodrigues de Freitas',
-						'Viso' => 'Viso',
 						'Outro' => 'Outro'],
 			                     
 			                    $activo->localizacao, ['class'=> 'form-control']) !!}

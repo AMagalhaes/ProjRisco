@@ -12,35 +12,26 @@
         <table>
             <tr>
                 <td><h4><b>Níveis de risco</b></h4></td>
-            </tr>
-                <tr></tr>
-            <tr>
-                <td>Aceitável</td>
-                <td>-----</td>
-                <td>-------></td>
-                <td></td>
-                <td>0 - 50</td>
+              </tr>  
+              <tr>
+                <td class = "sucesso">Aceitável</td>
+                <td class = "sucesso">-------></td>
+                <td class = "sucesso">0 - 50</td>
             </tr>
             <tr>
-                <td>Normal</td>
-                <td>-----</td>
-                <td>-------></td>
-                <td></td>
-                <td>51 - 1250</td>
+                <td class = "ativo">Normal</td>
+                <td class = "ativo">-------></td>
+                <td class = "ativo">51 - 200</td>
             </tr>
             <tr>
-                <td>Alto</td>
-                <td>-----</td>
-                <td>-------></td>
-                <td></td>
-                <td>1251 - 2250</td>
+                <td class = "cuidado">Alto</td>
+                <td class = "cuidado">-------></td>
+                <td class = "cuidado">2011 - 300</td>
             </tr>
             <tr>
-                <td>Crítico</td>
-                <td>-----</td>
-                <td>-------></td>
-                <td></td>
-                <td>2251 - 2500</td>
+                <td class = "perigo">Crítico</td>
+                <td class = "perigo">-------></td>
+                <td class = "perigo">301 - 500</td>
             </tr>
         </table>
 

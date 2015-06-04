@@ -19,7 +19,7 @@
                     <button type="button" class="btn btn-info btn-xs" data-toggle="popover" title="Identificação do risco"
                             data-content="Identifica o ativo para o qual foi criado este controlo.">i
                     </button>
-                    {!! Form::label('idTrata', 'Activo:') !!}
+                    {!! Form::label('idTrata', 'Ativo:') !!}
                     {!! Form::text('idTrata',$trata->risco->activo->nome, ['class'=> 'form-control', 'disabled' => true]) !!}
                 </div>
             </div>

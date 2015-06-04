@@ -16,7 +16,7 @@
 		<thead>
 			<tr>
 				<th class="col-md-1, text-center">Ref.Risco</th>
-				<th class="col-md-2">Nome Activo</th>
+				<th class="col-md-2">Nome Ativo</th>
 				<th class="col-md-3">Ameaça</th>
 				<th class="col-md-1, text-center">Probabilidade</th>
 				<th class="col-md-2, text-center">Impacto</th>
@@ -48,21 +48,16 @@
 					<td class="text-center">{!! 'Muito Alta' !!}</td>
 					@endif
 
-					@if($risco->impacto == 1)
-					<td class="text-center">{!! 'Reduzido' !!}</td>
-					@endif
-					@if($risco->impacto == 2)
+					@if($risco->impacto > 0 && $risco->impacto <= 3)
 					<td class="text-center">{!! 'Baixo' !!}</td>
 					@endif
-					@if($risco->impacto == 3)
-					<td class="text-center">{!! 'Medio' !!}</td>
+					@if($risco->impacto > 3 && $risco->impacto <= 7)
+					<td class="text-center">{!! 'Médio' !!}</td>
 					@endif
-					@if($risco->impacto == 4)
+					@if($risco->impacto > 7 && $risco->impacto <= 10)
 					<td class="text-center">{!! 'Alto' !!}</td>
 					@endif
-					@if($risco->impacto == 5)
-					<td class="text-center">{!! 'Muito Alto' !!}</td>
-					@endif
+					
 
 						<td class="text-center">
 							{!! Form::open(array('route' => array('activo.risco.destroy', $risco->activo_id, $risco->id), 'method' => 'delete')) !!}

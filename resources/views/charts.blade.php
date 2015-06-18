@@ -26,7 +26,7 @@
             <tr>
                 <td class = "cuidado">Alto</td>
                 <td class = "cuidado">-------></td>
-                <td class = "cuidado">2011 - 300</td>
+                <td class = "cuidado">201 - 300</td>
             </tr>
             <tr>
                 <td class = "perigo">Crítico</td>

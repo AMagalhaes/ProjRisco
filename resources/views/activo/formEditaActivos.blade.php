@@ -64,6 +64,8 @@ function getValue()
 						'DMGE' => 'DMGE',
 						'DMSI' => 'DMSI',
 						'Escolas' => 'Escolas',
+						'Cozinhas' => 'Cozinhas',
+						'Refeitorios' => 'Refeitórios',
 						'Outro' => 'Outro'],
 			                     
 			                    $activo->localizacao, ['class'=> 'form-control']) !!}
@@ -99,9 +101,7 @@ function getValue()
 					</button>
 					{!! Form::label('tipo', 'Tipo Ativo:') !!}
 					{!! Form::select('tipo', [
-						'Cozinha' => 'Cozinha',
-						'Refeitório' => 'Refeitório',
-						'Escola' => 'Escola',
+						'Infra-estrutura' => 'Infra-estrutura',
 						'Hardware' => 'Hardware',
 						'Software' => 'Software',
 						'Humano' => 'Humano',

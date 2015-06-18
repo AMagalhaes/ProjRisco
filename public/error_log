@@ -32,3 +32,34 @@
 [28-May-2015 18:51:14 UTC] PHP Fatal error:  Can't use function return value in write context in /home/luisneiva/public_html/app/Http/Controllers/ActivoController.php on line 24
 [28-May-2015 18:52:04 UTC] PHP Fatal error:  Can't use function return value in write context in /home/luisneiva/public_html/app/Http/Controllers/ActivoController.php on line 32
 [28-May-2015 19:11:35 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Activo' not found in /home/luisneiva/public_html/app/Http/Controllers/ChartController.php on line 19
+[29-May-2015 08:49:42 UTC] PHP Fatal error:  Class 'App\Http\Requests\Auth' not found in /home/luisneiva/public_html/app/Http/Requests/RegRiscoRequest.php on line 14
+[29-May-2015 08:58:04 UTC] PHP Fatal error:  Class 'App\Http\Requests\Auth' not found in /home/luisneiva/public_html/app/Http/Requests/RegRiscoRequest.php on line 14
+[29-May-2015 08:58:07 UTC] PHP Fatal error:  Class 'App\Http\Requests\Auth' not found in /home/luisneiva/public_html/app/Http/Requests/RegRiscoRequest.php on line 14
+[29-May-2015 08:58:27 UTC] PHP Fatal error:  Class 'App\Http\Requests\Auth' not found in /home/luisneiva/public_html/app/Http/Requests/RegRiscoRequest.php on line 14
+[29-May-2015 08:59:44 UTC] PHP Fatal error:  Class 'App\Http\Requests\Auth' not found in /home/luisneiva/public_html/app/Http/Requests/RegTrataRequest.php on line 14
+[29-May-2015 10:07:49 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/luisneiva/public_html/storage/framework/views/42baf3a8d08711dedfa189fb89e6736a on line 85
+[29-May-2015 10:11:14 UTC] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS) in /home/luisneiva/public_html/storage/framework/views/42baf3a8d08711dedfa189fb89e6736a on line 88
+[29-May-2015 10:13:55 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/luisneiva/public_html/storage/framework/views/42baf3a8d08711dedfa189fb89e6736a on line 87
+[29-May-2015 10:13:56 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/luisneiva/public_html/storage/framework/views/42baf3a8d08711dedfa189fb89e6736a on line 87
+[29-May-2015 10:24:25 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/luisneiva/public_html/storage/framework/views/42baf3a8d08711dedfa189fb89e6736a on line 85
+[29-May-2015 10:52:59 UTC] PHP Parse error:  syntax error, unexpected ':', expecting '(' in /home/luisneiva/public_html/storage/framework/views/13f6321d50a52fb48ff7a81b7a18127d on line 53
+[04-Jun-2015 10:32:27 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/luisneiva/public_html/storage/framework/views/15c7497ea96f8b5ac5c212ae9115671f on line 75
+[04-Jun-2015 10:32:28 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/luisneiva/public_html/storage/framework/views/15c7497ea96f8b5ac5c212ae9115671f on line 75
+[04-Jun-2015 10:32:48 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/luisneiva/public_html/storage/framework/views/15c7497ea96f8b5ac5c212ae9115671f on line 75
+[04-Jun-2015 10:32:53 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/luisneiva/public_html/storage/framework/views/15c7497ea96f8b5ac5c212ae9115671f on line 75
+[04-Jun-2015 10:33:01 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/luisneiva/public_html/storage/framework/views/15c7497ea96f8b5ac5c212ae9115671f on line 75
+[04-Jun-2015 10:42:57 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/luisneiva/public_html/storage/framework/views/15c7497ea96f8b5ac5c212ae9115671f on line 72
+[04-Jun-2015 10:43:17 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/luisneiva/public_html/storage/framework/views/15c7497ea96f8b5ac5c212ae9115671f on line 72
+[11-Jun-2015 10:30:31 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:31:04 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:31:11 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:31:26 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:31:39 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:31:39 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:31:44 UTC] PHP Parse error:  syntax error, unexpected 'Outro' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/71de770e5704303d7172906ba604c7d8 on line 75
+[11-Jun-2015 10:32:54 UTC] PHP Parse error:  syntax error, unexpected 'Outro' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/71de770e5704303d7172906ba604c7d8 on line 75
+[11-Jun-2015 10:33:02 UTC] PHP Parse error:  syntax error, unexpected 'Outro' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/71de770e5704303d7172906ba604c7d8 on line 75
+[11-Jun-2015 10:33:05 UTC] PHP Parse error:  syntax error, unexpected 'Outro' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/71de770e5704303d7172906ba604c7d8 on line 75
+[11-Jun-2015 10:33:21 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:33:40 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70
+[11-Jun-2015 10:33:43 UTC] PHP Parse error:  syntax error, unexpected 'Refeitorio' (T_STRING), expecting ']' in /home/luisneiva/public_html/storage/framework/views/8cdb30ac847222fc90d19d91b78e3184 on line 70

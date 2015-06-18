@@ -22,6 +22,8 @@
 				'DMGE' => 'DMGE',
 				'DMSI' => 'DMSI',
 				'Escolas' => 'Escolas',
+				'Cozinhas' =>'Cozinhas',
+				'Refeitorios' => 'Refeitórios', 
 				'Outro' => 'Outro'
                     
 			], ['class'=> 'form-control']) !!}
@@ -29,9 +31,7 @@
             {!! Form::label('tipo', 'Tipo:') !!}
 			{!! Form::select('tipoFilter',[
 				'Todos',
-				'Cozinha' => 'Cozinha',
-				'Refeitório' => 'Refeitório',
-				'Escola' => 'Escola',
+				'Infra-estrutura' => 'Infra-estrutura',
 				'Hardware' => 'Hardware',
 				'Software' => 'Software',
 				'Humano' => 'Humano',
